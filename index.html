@@ -113,10 +113,21 @@
 <!-- ใส่ overflow-hidden ไว้ก่อนเพื่อล็อกหน้าจอตอน Welcome Screen แสดง -->
 <body class="antialiased font-body-md text-body-md selection:bg-primary selection:text-black relative overflow-hidden">
 
+<!-- 🌟 [เพิ่ม] ส่วนนี้คือภาพพื้นหลังที่จะคงอยู่ทุกๆ หน้าแบบตายตัว (Fixed Faded Background) -->
+<div class="fixed inset-0 z-[-1] pointer-events-none">
+    <!-- ภาพพื้นหลัง ปรับให้เป็นขาวดำ (grayscale) และจาง (opacity-10) -->
+    <img src="https://cdn.discordapp.com/attachments/1032543542482051092/1517661085002633388/IMG_1454.jpg?ex=6a371787&is=6a35c607&hm=b4529cbce52e9eaf7e64afdcd4aac33571ccb483874beb4c705515a8fd09d881&" 
+         alt="Global Background" 
+         class="w-full h-full object-cover opacity-1 grayscale">
+    <!-- ฟิลเตอร์สีดำไล่ระดับทับด้านบน เพื่อให้ภาพดูมืดและเนียนไปกับพื้นหลังเว็บ -->
+    <div class="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/95"></div>
+</div>
+<!-- 🌟 [จบ] ส่วนพื้นหลัง -->
+
 <!-- ================= Welcome Screen ================= -->
 <div id="welcome-screen" class="fixed inset-0 z-[9999] bg-background flex flex-col items-center justify-center transition-all duration-1000 ease-in-out">
     <!-- พื้นหลังแสงเหลือบๆ -->
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-50"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-1"></div>
     
     <div class="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-3xl">
         <div class="reveal-item delay-1 mb-8">
@@ -143,7 +154,7 @@
 <div id="main-homepage">
     <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-safe h-20 bg-background/80 backdrop-blur-xl border-b border-glass-border duration-300 ease-in-out">
         <div class="flex items-center gap-gutter">
-            <a class="font-headline-sm text-headline-sm text-primary uppercase tracking-widest hover:opacity-80 transition-opacity" href="#">ASURA INK</a>
+            <a class="font-headline-sm text-headline-sm text-primary uppercase tracking-widest hover:opacity-1 transition-opacity" href="#">ASURA INK</a>
         </div>
         <div class="hidden md:flex items-center gap-8">
             <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps uppercase" href="#gallery">Gallery</a>
@@ -151,7 +162,7 @@
             <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps uppercase" href="#booking">Booking</a>
         </div>
         <div class="flex items-center gap-6">
-            <button class="text-primary font-label-caps text-label-caps uppercase hover:opacity-80 transition-opacity">EN/TH</button>
+            <button class="text-primary font-label-caps text-label-caps uppercase hover:opacity-1 transition-opacity">EN/TH</button>
             <a class="hidden md:block btn-primary py-2 px-6" href="#booking">Book Now</a>
         </div>
     </nav>
@@ -175,7 +186,8 @@
     </header>
 
     <section class="py-24 px-margin-safe max-w-container-max mx-auto">
-        <div class="relative overflow-hidden border border-glass-border bg-surface-container rounded-xl">
+        <!-- 🌟 [แก้ไข] เติม /40 backdrop-blur-md เพื่อให้ฉากหลังโปร่งแสงและเบลอ จะได้เห็นรูปหลังเว็บ -->
+        <div class="relative overflow-hidden border border-glass-border bg-surface-container/40 backdrop-blur-md/40 rounded-xl">
             <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5"></div>
             <div class="relative flex flex-col lg:flex-row items-center gap-10 p-8 lg:p-12">
                 <div class="relative shrink-0">
@@ -263,7 +275,8 @@
         </div>
     </section>
 
-    <section class="py-32 bg-surface-container-low border-y border-glass-border" id="awards">
+    <!-- 🌟 [แก้ไข] เติม /40 backdrop-blur-md ในส่วน Awards -->
+    <section class="py-32 bg-surface-container-low/40 backdrop-blur-md/40 border-y border-glass-border" id="awards">
         <div class="max-w-container-max mx-auto px-margin-safe">
             <div class="text-center mb-20">
                 <h2 class="font-headline text-4xl text-white tracking-wider mb-4">Recognition</h2>
@@ -351,7 +364,8 @@
         </div>
     </div>
 
-    <section class="py-20 bg-surface-container-low border-y border-glass-border relative overflow-hidden" id="sponsors">
+    <!-- 🌟 [แก้ไข] เติม /40 backdrop-blur-md ในส่วน Sponsors -->
+    <section class="py-20 bg-surface-container-low/40 backdrop-blur-md/40 border-y border-glass-border relative overflow-hidden" id="sponsors">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent opacity-50"></div>
         <div class="max-w-container-max mx-auto px-margin-safe relative z-10">
             <div class="text-center mb-12">
@@ -406,7 +420,8 @@
         </div>
     </div>
 
-    <section class="py-24 bg-surface-container-low border-y border-glass-border" id="booking">
+    <!-- 🌟 [แก้ไข] เติม /40 backdrop-blur-md ในส่วน Booking -->
+    <section class="py-24 bg-surface-container-low/40 backdrop-blur-md/40 border-y border-glass-border" id="booking">
         <div class="max-w-container-max mx-auto px-margin-safe">
             <div class="flex flex-col md:flex-row gap-16">
                 <div class="md:w-1/3">
@@ -429,7 +444,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="md:w-2/3 bg-matte-obsidian border border-glass-border p-6 md:p-10">
+                <!-- 🌟 [แก้ไข] เติม /50 backdrop-blur-sm ให้กล่องปฏิทินโปร่งแสงด้วย -->
+                <div class="md:w-2/3 bg-matte-obsidian/50 backdrop-blur-sm border border-glass-border p-6 md:p-10">
                     <div class="flex justify-between items-center mb-8">
                         <h3 class="font-headline-sm text-headline-sm text-white">October 2025</h3>
                         <div class="flex gap-2">
@@ -445,19 +461,19 @@
                         <div class="bg-surface-container-low p-3 text-center font-label-caps text-label-caps text-on-surface-variant">THU</div>
                         <div class="bg-surface-container-low p-3 text-center font-label-caps text-label-caps text-on-surface-variant">FRI</div>
                         <div class="bg-surface-container-low p-3 text-center font-label-caps text-label-caps text-on-surface-variant">SAT</div>
-                        <div class="bg-matte-obsidian p-4 aspect-square"></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square"></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square"></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">1</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">2</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">3</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">4</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">5</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">6</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">7</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">8</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">9</span></div>
-                        <div class="bg-primary-container/10 p-4 aspect-square relative group cursor-pointer border border-primary transition-all">
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square"></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square"></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square"></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">1</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">2</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">3</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">4</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">5</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">6</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">7</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">8</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">9</span></div>
+                        <div class="bg-primary-container/20 p-4 aspect-square relative group cursor-pointer border border-primary transition-all backdrop-blur-md">
                             <span class="text-primary font-bold">10</span>
                             <div class="absolute bottom-2 left-2 right-2 text-center opacity-0 group-hover:opacity-100 transition-opacity">
                                 <span class="block w-2 h-2 rounded-full bg-primary mx-auto mb-1"></span>
@@ -465,17 +481,17 @@
                                 <span class="text-[9px] text-on-surface-variant uppercase block">Available</span>
                             </div>
                         </div>
-                        <div class="bg-surface-container-highest p-4 aspect-square relative flex items-center justify-center">
+                        <div class="bg-surface-container-highest/80 p-4 aspect-square relative flex items-center justify-center">
                             <span class="absolute top-4 left-4 text-on-surface-variant/50">11</span>
                             <span class="text-[10px] text-red-400/70 uppercase tracking-widest rotate-45">Booked</span>
                         </div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">12</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">13</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">14</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">15</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">16</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">17</span></div>
-                        <div class="bg-matte-obsidian p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">18</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">12</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">13</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">14</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">15</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">16</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">17</span></div>
+                        <div class="bg-matte-obsidian/80 p-4 aspect-square relative group cursor-pointer hover:bg-surface-container-high transition-colors"><span class="text-on-surface-variant">18</span></div>
                     </div>
                     <div class="mt-8 flex justify-end">
                         <button class="btn-primary w-full md:w-auto">Confirm Selection</button>
@@ -485,7 +501,8 @@
         </div>
     </section>
 
-    <footer class="w-full py-12 px-margin-safe flex flex-col md:flex-row justify-between items-center gap-gutter bg-matte-obsidian border-t border-glass-border flat no shadows duration-200" id="contact">
+    <!-- 🌟 [แก้ไข] ปรับ Footer ให้โปร่งแสงรับกับพื้นหลัง -->
+    <footer class="w-full py-12 px-margin-safe flex flex-col md:flex-row justify-between items-center gap-gutter bg-matte-obsidian/60 backdrop-blur-md border-t border-glass-border flat no shadows duration-200" id="contact">
         <div class="flex flex-col md:flex-row items-center gap-8 mb-8 md:mb-0">
             <a class="font-headline-sm text-headline-sm text-primary" href="#">ASURA INK</a>
             <div class="h-px w-12 md:h-8 md:w-px bg-glass-border"></div>
@@ -506,7 +523,8 @@
     </footer>
 </div>
 
-<div id="portfolio-detail-page" class="hidden min-h-screen bg-background pt-24 pb-12 transition-all duration-500">
+<!-- 🌟 [แก้ไข] หน้า Detail Page เวลาคลิกดูรูป เปลี่ยน bg-background เป็น bg-background/60 backdrop-blur-md ให้ทะลุเห็นลายเส้นด้านหลัง -->
+<div id="portfolio-detail-page" class="hidden min-h-screen bg-background/60 backdrop-blur-md pt-24 pb-12 transition-all duration-500">
     <div class="max-w-container-max mx-auto px-margin-safe">
         
         <button onclick="closePortfolioPage()" class="inline-flex items-center gap-3 border border-primary bg-primary/10 hover:bg-primary hover:text-black text-primary font-label-caps text-[13px] uppercase tracking-[0.15em] transition-all duration-300 mb-12 px-6 py-3 rounded shadow-[0_0_15px_rgba(212,175,55,0.15)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] focus:outline-none">
