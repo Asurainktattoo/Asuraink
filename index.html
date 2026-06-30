@@ -10,6 +10,48 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://i.ibb.co/S4fpg7Md/A-v2-c1-4x.png">
     <link rel="icon" href="https://i.ibb.co/S4fpg7Md/A-v2-c1-4x.png">
+
+    <!-- LocalBusiness Schema (SEO) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TattooParlor",
+        "name": "Asura Ink Tattoo Pattaya",
+        "image": "https://i.ibb.co/S4fpg7Md/A-v2-c1-4x.png",
+        "description": "Award-winning tattoo studio in Pattaya, Thailand. Custom design, fine line, blackwork and Japanese traditional tattoos.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "373/10 Moo 9, 3rd Road, Bang Lamung District",
+            "addressLocality": "Pattaya",
+            "addressRegion": "Chon Buri",
+            "postalCode": "20150",
+            "addressCountry": "TH"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 12.9351,
+            "longitude": 100.8825
+        },
+        "telephone": "+66924263914",
+        "url": "https://asuraink.com",
+        "priceRange": "฿฿",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "11:00",
+            "closes": "20:00"
+        },
+        "sameAs": [
+            "https://www.instagram.com/asuraink_tattoo",
+            "https://www.facebook.com/Asura.tattoo2025"
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "6"
+        }
+    }
+    </script>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
@@ -271,12 +313,6 @@ body::after{
 .ftab.active,.ftab:hover{color:#f2ca50;border-color:rgba(212,175,55,.45);background:rgba(212,175,55,.04);}
 
 /* ============================
-   AWARDS — 3D tilt
-============================ */
-.acard{transform-style:preserve-3d;transition:box-shadow .3s;}
-.acard:hover{box-shadow:0 25px 60px rgba(0,0,0,.6),0 0 30px rgba(212,175,55,.1);}
-
-/* ============================
    REVIEWS — marquee
 ============================ */
 .mtrack{
@@ -333,12 +369,6 @@ body::after{
     0%,100%{box-shadow:0 0 20px rgba(212,175,55,.3);}
     50%{box-shadow:0 0 45px rgba(212,175,55,.65),0 0 80px rgba(212,175,55,.18);}
 }
-
-/* ============================
-   SPONSOR
-============================ */
-.sitem{filter:grayscale(1) brightness(.5);opacity:.55;transition:all .4s;cursor:none!important;}
-.sitem:hover{filter:grayscale(0) brightness(1);opacity:1;transform:scale(1.08);}
 
 /* ============================
    STATUS PULSE
@@ -418,6 +448,7 @@ body::after{
         <a class="nlink" href="#reviews">Reviews</a>
         <a class="nlink" href="#faq">FAQ</a>
         <a class="nlink" href="#booking">Booking</a>
+        <a class="nlink" href="#map">Find Us</a>
     </div>
     <div style="display:flex;align-items:center;gap:1rem;">
         <a class="btn-p mag hidden md:inline-flex" href="#booking"><span>Book Now</span></a>
@@ -440,6 +471,7 @@ body::after{
         <a class="caps" href="#reviews" data-ml style="color:#d0c5af;text-decoration:none;padding:.75rem 0;border-bottom:1px solid rgba(212,175,55,.1);">Reviews</a>
         <a class="caps" href="#faq" data-ml style="color:#d0c5af;text-decoration:none;padding:.75rem 0;border-bottom:1px solid rgba(212,175,55,.1);">FAQ</a>
         <a class="caps" href="#booking" data-ml style="color:#d0c5af;text-decoration:none;padding:.75rem 0;border-bottom:1px solid rgba(212,175,55,.1);">Booking</a>
+        <a class="caps" href="#map" data-ml style="color:#d0c5af;text-decoration:none;padding:.75rem 0;border-bottom:1px solid rgba(212,175,55,.1);">Find Us</a>
     </nav>
     <a class="btn-p" href="#booking" data-ml style="text-decoration:none;justify-content:center;margin-top:1.5rem;"><span>Book Now</span></a>
 </div>
@@ -598,112 +630,7 @@ body::after{
     </div>
 </section>
 
-<!-- ── AWARDS ── -->
-<section id="awards" style="padding:7rem 2rem;background:#111313;border-top:1px solid rgba(212,175,55,.1);border-bottom:1px solid rgba(212,175,55,.1);">
-    <div style="max-width:1200px;margin:0 auto;">
-        <div class="reveal" style="text-align:center;margin-bottom:5rem;">
-            <div class="eyebrow" style="justify-content:center;margin-bottom:1rem;">Recognition</div>
-            <h2 class="serif" style="font-size:clamp(2.5rem,5vw,3.5rem);color:white;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;">Awards</h2>
-            <div class="divider" style="margin-bottom:1.5rem;"></div>
-            <p class="caps" style="color:rgba(208,197,175,.45);">รางวัลการันตีคุณภาพ / ผลงานการประกวด</p>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
-
-            <div class="acard reveal" onclick="openAward('https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=800','1st Place Blackwork','Thailand Tattoo Expo 2024','รางวัลชนะเลิศอันดับ 1 ประเภทงาน Blackwork ด้วยการออกแบบที่ประณีตและมีเอกลักษณ์ สะท้อนถึงความเชี่ยวชาญในการลงเงาและการจัดวางองค์ประกอบศิลป์บนสรีระอย่างสมบูรณ์แบบ')"
-                 style="position:relative;overflow:hidden;background:#0A0A0A;border:1px solid rgba(212,175,55,.12);height:420px;cursor:none!important;display:flex;flex-direction:column;justify-content:flex-end;">
-                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=800" loading="lazy" alt="Award" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1);opacity:.35;transition:all 1.2s ease;">
-                <div style="position:absolute;inset:0;background:linear-gradient(to top,#050505 0%,rgba(5,5,5,.7) 50%,transparent 100%);"></div>
-                <div class="ainside" style="position:relative;z-index:1;padding:2rem;text-align:center;transition:transform .5s ease;">
-                    <span class="material-symbols-outlined" style="font-size:2.5rem;color:#f2ca50;display:block;margin-bottom:1rem;opacity:.75;">emoji_events</span>
-                    <h3 class="serif" style="font-size:1.5rem;color:white;letter-spacing:.08em;margin-bottom:.5rem;">1st Place Blackwork</h3>
-                    <p class="caps" style="color:#f2ca50;font-size:8px;">Thailand Tattoo Expo 2024</p>
-                </div>
-            </div>
-
-            <div class="acard reveal" onclick="openAward('https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&q=80&w=800','Best of Show','Pattaya Tattoo Festival 2025','รางวัลผลงานยอดเยี่ยมที่สุดในงาน (Best of Show) จากผลงาน Custom Design ลายเส้นละเอียดที่ใช้เวลาสักต่อเนื่องกว่า 18 ชั่วโมง แสดงถึงความอดทนและเทคนิคขั้นสูง')"
-                 style="position:relative;overflow:hidden;background:#0A0A0A;border:1px solid rgba(212,175,55,.12);height:420px;cursor:none!important;display:flex;flex-direction:column;justify-content:flex-end;">
-                <img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&q=80&w=800" loading="lazy" alt="Award" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1);opacity:.35;transition:all 1.2s ease;">
-                <div style="position:absolute;inset:0;background:linear-gradient(to top,#050505 0%,rgba(5,5,5,.7) 50%,transparent 100%);"></div>
-                <div class="ainside" style="position:relative;z-index:1;padding:2rem;text-align:center;transition:transform .5s ease;">
-                    <span class="material-symbols-outlined" style="font-size:2.5rem;color:#f2ca50;display:block;margin-bottom:1rem;opacity:.75;">workspace_premium</span>
-                    <h3 class="serif" style="font-size:1.5rem;color:white;letter-spacing:.08em;margin-bottom:.5rem;">Best of Show</h3>
-                    <p class="caps" style="color:#f2ca50;font-size:8px;">Pattaya Tattoo Festival 2025</p>
-                </div>
-            </div>
-
-            <div class="acard reveal" onclick="openAward('https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&q=80&w=800','2nd Place Fine Line','Asian Ink Alliance 2023','รองชนะเลิศอันดับ 1 ประเภทงานลายเส้น (Fine Line) ระดับเอเชีย ด้วยเทคนิคการเดินเส้นเข็มเดี่ยวที่คมชัดและบางเบา สร้างมิติให้กับผลงานแนว Minimalist อย่างลงตัว')"
-                 style="position:relative;overflow:hidden;background:#0A0A0A;border:1px solid rgba(212,175,55,.12);height:420px;cursor:none!important;display:flex;flex-direction:column;justify-content:flex-end;">
-                <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&q=80&w=800" loading="lazy" alt="Award" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1);opacity:.35;transition:all 1.2s ease;">
-                <div style="position:absolute;inset:0;background:linear-gradient(to top,#050505 0%,rgba(5,5,5,.7) 50%,transparent 100%);"></div>
-                <div class="ainside" style="position:relative;z-index:1;padding:2rem;text-align:center;transition:transform .5s ease;">
-                    <span class="material-symbols-outlined" style="font-size:2.5rem;color:#f2ca50;display:block;margin-bottom:1rem;opacity:.75;">military_tech</span>
-                    <h3 class="serif" style="font-size:1.5rem;color:white;letter-spacing:.08em;margin-bottom:.5rem;">2nd Place Fine Line</h3>
-                    <p class="caps" style="color:#f2ca50;font-size:8px;">Asian Ink Alliance 2023</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- Modal: Awards -->
-<div id="amodal" class="modal">
-    <button onclick="closeAward()" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#d0c5af;display:flex;align-items:center;gap:.5rem;z-index:10;cursor:none!important;">
-        <span class="caps" style="font-size:9px;">Close</span>
-        <span class="material-symbols-outlined" style="font-size:1.25rem;">close</span>
-    </button>
-    <div class="mbox" style="max-width:800px;width:100%;padding:1.5rem;display:flex;flex-direction:column;align-items:center;">
-        <img id="am-img" src="" style="max-height:50vh;max-width:100%;object-fit:contain;border:1px solid rgba(212,175,55,.2);margin-bottom:2rem;" alt="">
-        <span id="am-ev" class="caps" style="color:#f2ca50;font-size:9px;margin-bottom:.75rem;display:block;"></span>
-        <h3 id="am-title" class="serif" style="font-size:2rem;color:white;text-align:center;margin-bottom:1.5rem;"></h3>
-        <div class="divider" style="margin-bottom:1.5rem;"></div>
-        <p id="am-desc" style="color:rgba(208,197,175,.8);text-align:center;line-height:1.9;font-size:.875rem;max-width:560px;"></p>
-    </div>
-</div>
-
-<!-- ── SPONSORS ── -->
-<section id="sponsors" style="padding:5rem 2rem;background:#080808;border-bottom:1px solid rgba(212,175,55,.1);overflow:hidden;">
-    <div style="max-width:1200px;margin:0 auto;">
-        <div class="reveal" style="text-align:center;margin-bottom:3rem;">
-            <h2 class="serif" style="font-size:1.75rem;color:white;text-transform:uppercase;letter-spacing:.15em;margin-bottom:.25rem;">Official Sponsors &amp; Partners</h2>
-            <p class="caps" style="color:#f2ca50;font-size:8px;">ผู้สนับสนุนอย่างเป็นทางการ</p>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:3rem 5rem;">
-            <div class="sitem reveal" onclick="openSponsor('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=600','INK BRAND','ผู้สนับสนุนหลักผลิตภัณฑ์สีสักคุณภาพสูงระดับสากล นำเข้าจากอเมริกา')" style="display:flex;flex-direction:column;align-items:center;gap:.75rem;">
-                <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=200" loading="lazy" alt="Ink Brand" style="width:64px;height:64px;object-fit:cover;border-radius:50%;border:1px solid rgba(212,175,55,.2);">
-                <span class="serif" style="color:white;font-size:1rem;text-transform:uppercase;letter-spacing:.15em;">INK BRAND</span>
-            </div>
-            <div class="sitem reveal" onclick="openSponsor('https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&q=80&w=600','MACHINE PRO','อุปกรณ์เครื่องสักนวัตกรรมใหม่ ช่วยให้การลงเส้นแม่นยำยิ่งขึ้น')" style="display:flex;flex-direction:column;align-items:center;gap:.75rem;">
-                <img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&q=80&w=200" loading="lazy" alt="Machine" style="width:64px;height:64px;object-fit:cover;border-radius:50%;border:1px solid rgba(212,175,55,.2);">
-                <span class="serif" style="color:white;font-size:1rem;text-transform:uppercase;letter-spacing:.15em;">MACHINE PRO</span>
-            </div>
-            <div class="sitem reveal" onclick="openSponsor('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=600','AFTERCARE+','ผลิตภัณฑ์ดูแลรอยสักหลังทำเพื่อการฟื้นฟูผิวที่รวดเร็ว')" style="display:flex;flex-direction:column;align-items:center;gap:.75rem;">
-                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=200" loading="lazy" alt="Aftercare" style="width:64px;height:64px;object-fit:cover;border-radius:50%;border:1px solid rgba(212,175,55,.2);">
-                <span class="serif" style="color:white;font-size:1rem;text-transform:uppercase;letter-spacing:.15em;">AFTERCARE+</span>
-            </div>
-            <div class="sitem reveal" onclick="openSponsor('https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=600','PREMIUM NEEDLES','เข็มสักเกรดพรีเมียม มาตรฐานทางการแพทย์ปลอดภัยสูงสุด')" style="display:flex;flex-direction:column;align-items:center;gap:.75rem;">
-                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=200" loading="lazy" alt="Needles" style="width:64px;height:64px;object-fit:cover;border-radius:50%;border:1px solid rgba(212,175,55,.2);">
-                <span class="serif" style="color:white;font-size:1rem;text-transform:uppercase;letter-spacing:.15em;">NEEDLES PRO</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Modal: Sponsors -->
-<div id="smodal" class="modal">
-    <button onclick="closeSponsor()" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#d0c5af;display:flex;align-items:center;gap:.5rem;z-index:10;cursor:none!important;">
-        <span class="caps" style="font-size:9px;">Close</span>
-        <span class="material-symbols-outlined" style="font-size:1.25rem;">close</span>
-    </button>
-    <div class="mbox" style="max-width:600px;width:100%;padding:1.5rem;display:flex;flex-direction:column;align-items:center;">
-        <img id="sm-img" src="" style="max-height:40vh;max-width:100%;object-fit:contain;border:1px solid rgba(212,175,55,.2);border-radius:.5rem;margin-bottom:2rem;" alt="">
-        <span class="caps" style="color:#f2ca50;font-size:9px;margin-bottom:.5rem;display:block;">Official Partner</span>
-        <h3 id="sm-title" class="serif" style="font-size:1.75rem;color:white;text-align:center;margin-bottom:1rem;"></h3>
-        <div class="divider" style="margin-bottom:1rem;"></div>
-        <p id="sm-desc" style="color:rgba(208,197,175,.8);text-align:center;line-height:1.9;font-size:.875rem;"></p>
-    </div>
-</div>
-
+<!-- ── GOOGLE REVIEWS ── -->
 <!-- ── BOOKING ── -->
 <section id="booking" style="padding:7rem 2rem;background:#111313;border-top:1px solid rgba(212,175,55,.1);">
     <div style="max-width:1200px;margin:0 auto;">
@@ -743,22 +670,120 @@ body::after{
     </div>
 </section>
 
-<!-- ── REVIEWS MARQUEE ── -->
-<section id="reviews" style="padding:6rem 0;background:#080808;border-top:1px solid rgba(212,175,55,.1);overflow:hidden;">
-    <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
-        <div class="reveal" style="text-align:center;margin-bottom:4rem;">
-            <div class="eyebrow" style="justify-content:center;margin-bottom:1rem;">Testimonials</div>
-            <h2 class="serif" style="font-size:clamp(2.5rem,5vw,3.5rem);color:white;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;">Client Reviews</h2>
+<!-- ── MAP ── -->
+<section id="map" style="padding:5rem 2rem 0;background:#080808;border-top:1px solid rgba(212,175,55,.1);">
+    <div style="max-width:1200px;margin:0 auto;">
+        <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+            <div class="eyebrow" style="justify-content:center;margin-bottom:1rem;">Find Us</div>
+            <h2 class="serif" style="font-size:clamp(2.5rem,5vw,3.5rem);color:white;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;">Studio Location</h2>
             <div class="divider"></div>
         </div>
     </div>
-    <div style="overflow:hidden;padding:1rem 0;">
+    <div class="reveal" style="position:relative;width:100%;height:420px;border-top:1px solid rgba(212,175,55,.15);border-bottom:1px solid rgba(212,175,55,.15);overflow:hidden;">
+        <div style="position:absolute;inset:0;background:rgba(10,10,10,.18);pointer-events:none;z-index:1;mix-blend-mode:multiply;"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.5) 0%,transparent 12%,transparent 88%,rgba(10,10,10,.5) 100%);pointer-events:none;z-index:1;"></div>
+        <iframe
+            src="https://www.google.com/maps?q=Asura+Ink+Tattoo+Pattaya,373/10+Moo+9,+3rd+Road,+Bang+Lamung,+Chon+Buri+20150&output=embed"
+            width="100%" height="100%" style="border:0;filter:grayscale(.3) contrast(1.1);" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Asura Ink Tattoo Pattaya — Map">
+        </iframe>
+        <div style="position:absolute;bottom:1.5rem;left:1.5rem;z-index:2;background:rgba(5,5,5,.92);backdrop-filter:blur(16px);border:1px solid rgba(212,175,55,.25);padding:1.25rem 1.5rem;max-width:300px;box-shadow:0 10px 40px rgba(0,0,0,.5);">
+            <div class="serif" style="color:#f2ca50;font-size:1.1rem;letter-spacing:.08em;margin-bottom:.4rem;">ASURA INK</div>
+            <p style="color:rgba(208,197,175,.7);font-size:.75rem;line-height:1.7;margin-bottom:.75rem;">373/10 Moo 9, 3rd Road, Bang Lamung District, Chon Buri 20150</p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Asura+Ink+Tattoo+Pattaya" target="_blank" rel="noopener noreferrer" class="caps" style="display:inline-flex;align-items:center;gap:.4rem;color:#f2ca50;text-decoration:none;font-size:9px;">
+                <span class="material-symbols-outlined" style="font-size:.95rem;">directions</span>Get Directions
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ── GOOGLE REVIEWS ── -->
+<section id="google-reviews" style="padding:6rem 0 7rem;background:#111313;border-top:1px solid rgba(212,175,55,.1);overflow:hidden;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
+        <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+            <div class="eyebrow" style="justify-content:center;margin-bottom:1rem;">Trusted By Clients</div>
+            <h2 class="serif" style="font-size:clamp(2.5rem,5vw,3.5rem);color:white;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;">Google Reviews</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="reveal" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2.5rem;background:#0A0A0A;border:1px solid rgba(212,175,55,.15);padding:2rem 2.5rem;margin-bottom:3rem;">
+            <svg width="46" height="46" viewBox="0 0 48 48" style="flex-shrink:0;">
+                <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+                <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+                <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/>
+                <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
+            </svg>
+            <div style="text-align:center;">
+                <div style="display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:.35rem;">
+                    <span class="serif" style="font-size:2.25rem;color:white;line-height:1;">5.0</span>
+                    <div style="display:flex;gap:1px;">
+                        <span class="material-symbols-outlined" style="color:#FBBC05;font-size:1.1rem;font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined" style="color:#FBBC05;font-size:1.1rem;font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined" style="color:#FBBC05;font-size:1.1rem;font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined" style="color:#FBBC05;font-size:1.1rem;font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined" style="color:#FBBC05;font-size:1.1rem;font-variation-settings:'FILL' 1">star</span>
+                    </div>
+                </div>
+                <p class="caps" style="color:rgba(208,197,175,.5);font-size:9px;">Based on Verified Google Reviews</p>
+            </div>
+            <div style="width:1px;height:48px;background:rgba(212,175,55,.15);" class="hidden sm:block"></div>
+            <a href="https://www.google.com/maps/search/Asura+Ink+Tattoo+Pattaya" target="_blank" rel="noopener noreferrer" class="btn-s" style="text-decoration:none;">
+                <svg width="14" height="14" viewBox="0 0 48 48" style="flex-shrink:0;">
+                    <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+                    <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+                    <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/>
+                    <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
+                </svg>
+                Write a Review
+            </a>
+        </div>
+    </div>
+
+    <div style="overflow:hidden;padding:.5rem 0;">
         <div class="mtrack" id="mtrack"></div>
     </div>
-    <div style="text-align:center;margin-top:3rem;padding:0 2rem;">
+
+    <div class="reveal" style="text-align:center;margin-top:2.5rem;">
         <a class="btn-s" href="https://www.google.com/maps/search/Asura+Ink+Tattoo+Pattaya" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
-            <span class="material-symbols-outlined" style="font-size:1rem;">star</span>See All Reviews on Google
+            <svg width="14" height="14" viewBox="0 0 48 48" style="flex-shrink:0;">
+                <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+                <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+                <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/>
+                <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
+            </svg>
+            See All Reviews on Google Maps
         </a>
+    </div>
+</section>
+
+<!-- ── INSTAGRAM FEED ── -->
+<section id="instagram" style="padding:6rem 2rem;background:#080808;border-top:1px solid rgba(212,175,55,.1);">
+    <div style="max-width:1200px;margin:0 auto;">
+        <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+            <div class="eyebrow" style="justify-content:center;margin-bottom:1rem;">Latest Work</div>
+            <h2 class="serif" style="font-size:clamp(2.5rem,5vw,3.5rem);color:white;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">
+                <span class="material-symbols-outlined" style="vertical-align:middle;font-size:1em;color:#f2ca50;margin-right:.3rem;">photo_camera</span>@asura_ink_tattoo
+            </h2>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Live Instagram embed widget -->
+        <div class="reveal" style="border:1px solid rgba(212,175,55,.15);background:#111313;padding:1.5rem;min-height:340px;display:flex;align-items:center;justify-content:center;">
+            <iframe
+                src="https://www.instagram.com/asuraink_tattoo/embed"
+                width="100%" height="700" frameborder="0" scrolling="no"
+                allowtransparency="true" loading="lazy"
+                style="max-width:540px;border:0;background:transparent;"
+                title="Asura Ink Instagram Feed">
+            </iframe>
+        </div>
+
+        <div style="text-align:center;margin-top:2.5rem;">
+            <a class="btn-p mag" href="https://www.instagram.com/asuraink_tattoo" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+                <span class="material-symbols-outlined" style="font-size:1rem;">photo_camera</span>
+                <span>Follow on Instagram</span>
+            </a>
+        </div>
     </div>
 </section>
 
@@ -979,7 +1004,6 @@ function initSite(){
     initScrollReveal();
     initStats();
     initGallery();
-    initAwardTilt();
     initMarquee();
     initCalendar();
     initFAQ();
@@ -1102,52 +1126,34 @@ function initGallery(){
     });
 }
 
-/* ─── AWARD CARD TILT ─── */
-function initAwardTilt(){
-    document.querySelectorAll('.acard').forEach(card=>{
-        const img=card.querySelector('img');
-        const inside=card.querySelector('.ainside');
-        card.addEventListener('mousemove',e=>{
-            const r=card.getBoundingClientRect();
-            const x=(e.clientX-r.left)/r.width-.5;
-            const y=(e.clientY-r.top)/r.height-.5;
-            gsap.to(card,{rotateY:x*14,rotateX:-y*14,duration:.4,ease:'power2.out',transformPerspective:900});
-            if(img){img.style.filter='grayscale(0)';img.style.opacity='.65';}
-            if(inside)gsap.to(inside,{y:-8,duration:.4,ease:'power2.out'});
-        });
-        card.addEventListener('mouseleave',()=>{
-            gsap.to(card,{rotateY:0,rotateX:0,duration:.65,ease:'power3.out'});
-            if(img){img.style.filter='grayscale(1)';img.style.opacity='.35';}
-            if(inside)gsap.to(inside,{y:0,duration:.55,ease:'power3.out'});
-        });
-    });
-}
-
 /* ─── REVIEWS MARQUEE ─── */
 const REVIEWS=[
-    {name:'James K.',      loc:'London, UK',   style:'Fine Line',  txt:'"Absolutely breathtaking work. The fine line detail is something I\'ve never seen matched anywhere in Asia."'},
-    {name:'ต้น วรวุฒิ',   loc:'Bangkok, TH',  style:'Blackwork',  txt:'"ประทับใจมากครับ ลายสักออกมาสวยมาก ศิลปินใส่ใจลูกค้า อธิบายทุกขั้นตอนละเอียด"'},
-    {name:'Marcus W.',     loc:'Berlin, DE',   style:'Japanese',   txt:'"I flew from Germany specifically for this artist. Worth every flight. The result is a masterpiece."'},
-    {name:'Sarah L.',      loc:'Sydney, AU',   style:'Custom',     txt:'"The custom piece exceeded every expectation. The studio atmosphere is premium and the care is unmatched."'},
-    {name:'Kenji T.',      loc:'Tokyo, JP',    style:'Blackwork',  txt:'"最高の仕事です。細部まで完璧で、スタジオの雰囲気もプロフェッショナル。また来ます。"'},
-    {name:'Elena M.',      loc:'Rome, IT',     style:'Fine Line',  txt:'"I travelled from Italy and it was 100% worth it. The studio is immaculate and the artistry is world-class."'},
+    {name:'Sam Poling',     time:'9 months ago', txt:'This place is absolutely awesome. If you\'re looking to get a high quality tattoo from a very experienced tattoo artist that will discuss small details with you (and nail it), you need to get some ink there. Making an appointment would be the best way to go.', replied:false},
+    {name:'Kenzie Doctor',  time:'5 months ago', txt:'Can\'t recommend enough. Done an absolute amazing job on my tat. Spent lots of time ensuring size and positioning was what I was wanting. The quality of the tattoo speaks for itself. During tattooing always asked if I needed breaks or anything. Amazing tattoo shop.', replied:true},
+    {name:'Branda',         time:'5 months ago', txt:'Thank you so much, number one in Pattaya for tattoos, I absolutely recommend.', replied:true},
+    {name:'J Kest',         time:'5 months ago', txt:'Thank you for the advice for my old tattoo and especially the realization of the new one in 3D which is absolutely great, thank you again to you, a super team.', replied:true},
 ];
 function initMarquee(){
     const track=document.getElementById('mtrack');
     if(!track)return;
+    const gIcon='<svg width="16" height="16" viewBox="0 0 48 48" style="flex-shrink:0;opacity:.85;"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>';
     const cards=[...REVIEWS,...REVIEWS].map(r=>`
-        <div style="flex-shrink:0;width:300px;background:rgba(18,20,20,.6);backdrop-filter:blur(12px);border:1px solid rgba(212,175,55,.12);padding:1.75rem;display:flex;flex-direction:column;gap:1rem;">
-            <div style="display:flex;gap:2px;">
-                ${'<span class="material-symbols-outlined" style="color:#f2ca50;font-size:.85rem;font-variation-settings:\'FILL\' 1">star</span>'.repeat(5)}
-            </div>
-            <p style="color:rgba(208,197,175,.8);font-size:.8rem;line-height:1.9;flex:1;">${r.txt}</p>
-            <div style="display:flex;align-items:center;gap:.75rem;border-top:1px solid rgba(212,175,55,.08);padding-top:.75rem;">
-                <div style="width:34px;height:34px;border-radius:50%;background:rgba(212,175,55,.12);display:flex;align-items:center;justify-content:center;font-family:'EB Garamond',serif;color:#f2ca50;font-size:1rem;">${r.name[0]}</div>
-                <div>
-                    <div style="color:white;font-size:.8rem;font-weight:500;">${r.name}</div>
-                    <div class="caps" style="color:rgba(208,197,175,.35);font-size:8px;">${r.loc} · ${r.style}</div>
+        <div style="flex-shrink:0;width:320px;background:rgba(18,20,20,.6);backdrop-filter:blur(12px);border:1px solid rgba(212,175,55,.12);padding:1.75rem;display:flex;flex-direction:column;gap:1rem;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+                <div style="display:flex;align-items:center;gap:.75rem;">
+                    <div style="width:34px;height:34px;border-radius:50%;background:rgba(212,175,55,.12);display:flex;align-items:center;justify-content:center;font-family:'EB Garamond',serif;color:#f2ca50;font-size:1rem;flex-shrink:0;">${r.name[0]}</div>
+                    <div>
+                        <div style="color:white;font-size:.8rem;font-weight:500;">${r.name}</div>
+                        <div class="caps" style="color:rgba(208,197,175,.35);font-size:8px;">${r.time}</div>
+                    </div>
                 </div>
+                ${gIcon}
             </div>
+            <div style="display:flex;gap:1px;">
+                ${'<span class="material-symbols-outlined" style="color:#FBBC05;font-size:.85rem;font-variation-settings:\'FILL\' 1">star</span>'.repeat(5)}
+            </div>
+            <p style="color:rgba(208,197,175,.8);font-size:.8rem;line-height:1.85;flex:1;">${r.txt}</p>
+            ${r.replied ? '<div class="caps" style="color:#f2ca50;font-size:8px;border-top:1px solid rgba(212,175,55,.08);padding-top:.7rem;display:flex;align-items:center;gap:.4rem;"><span class="material-symbols-outlined" style="font-size:.85rem;">reply</span>Owner replied</div>' : ''}
         </div>`).join('');
     track.innerHTML=cards;
 }
@@ -1304,21 +1310,6 @@ function closeModal(id){
     m.classList.remove('mvis');
     setTimeout(()=>{m.classList.remove('mopen');document.body.style.overflow='';},350);
 }
-function openAward(img,title,ev,desc){
-    document.getElementById('am-img').src=img;
-    document.getElementById('am-title').textContent=title;
-    document.getElementById('am-ev').textContent=ev;
-    document.getElementById('am-desc').textContent=desc;
-    openModal('amodal');
-}
-function closeAward(){closeModal('amodal');}
-function openSponsor(img,title,desc){
-    document.getElementById('sm-img').src=img;
-    document.getElementById('sm-title').textContent=title;
-    document.getElementById('sm-desc').textContent=desc;
-    openModal('smodal');
-}
-function closeSponsor(){closeModal('smodal');}
 
 /* ─── PORTFOLIO NAV ─── */
 function goPortfolio(title,tag){
@@ -1342,990 +1333,7 @@ function closePortfolio(){
 
 /* ─── ESC ─── */
 document.addEventListener('keydown',e=>{
-    if(e.key==='Escape'){closeAward();closeSponsor();closeAdmin();}
-});
-</script>
-
-<!-- ════════════════════════════════════════════════════
-     🔐 SECRET ADMIN PANEL
-     เปิดด้วย: คลิกโลโก้ซ้ายบน 5 ครั้ง → ใส่รหัส 1148
-════════════════════════════════════════════════════ -->
-
-<!-- Admin: PIN Dialog -->
-<div id="adm-pin-overlay" style="display:none;position:fixed;inset:0;z-index:19999;background:rgba(0,0,0,.92);backdrop-filter:blur(20px);align-items:center;justify-content:center;">
-    <div style="background:#0d0d0d;border:1px solid rgba(212,175,55,.3);padding:2.5rem;width:340px;text-align:center;box-shadow:0 0 60px rgba(212,175,55,.12);">
-        <div style="font-size:2rem;margin-bottom:.5rem;">🔐</div>
-        <h3 class="serif" style="color:#f2ca50;font-size:1.5rem;margin-bottom:.35rem;letter-spacing:.1em;">Admin Access</h3>
-        <p class="caps" style="color:rgba(208,197,175,.4);font-size:8px;margin-bottom:2rem;">ใส่รหัสผ่านเพื่อเข้าจัดการเว็บไซต์</p>
-        <div style="display:flex;gap:.5rem;justify-content:center;margin-bottom:1.5rem;" id="pin-dots">
-            <div class="pin-dot" style="width:14px;height:14px;border-radius:50%;border:1px solid rgba(212,175,55,.4);background:transparent;transition:all .2s;"></div>
-            <div class="pin-dot" style="width:14px;height:14px;border-radius:50%;border:1px solid rgba(212,175,55,.4);background:transparent;transition:all .2s;"></div>
-            <div class="pin-dot" style="width:14px;height:14px;border-radius:50%;border:1px solid rgba(212,175,55,.4);background:transparent;transition:all .2s;"></div>
-            <div class="pin-dot" style="width:14px;height:14px;border-radius:50%;border:1px solid rgba(212,175,55,.4);background:transparent;transition:all .2s;"></div>
-        </div>
-        <!-- Numpad -->
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1.25rem;">
-            <button class="pin-key" data-v="1">1</button>
-            <button class="pin-key" data-v="2">2</button>
-            <button class="pin-key" data-v="3">3</button>
-            <button class="pin-key" data-v="4">4</button>
-            <button class="pin-key" data-v="5">5</button>
-            <button class="pin-key" data-v="6">6</button>
-            <button class="pin-key" data-v="7">7</button>
-            <button class="pin-key" data-v="8">8</button>
-            <button class="pin-key" data-v="9">9</button>
-            <button class="pin-key" data-v="del" style="font-size:1.1rem;">⌫</button>
-            <button class="pin-key" data-v="0">0</button>
-            <button class="pin-key" data-v="ok" style="background:rgba(212,175,55,.15);color:#f2ca50;">OK</button>
-        </div>
-        <p id="pin-err" style="color:#ef4444;font-size:10px;letter-spacing:.1em;opacity:0;transition:opacity .3s;">รหัสไม่ถูกต้อง</p>
-        <button onclick="document.getElementById('adm-pin-overlay').style.display='none';" style="margin-top:1rem;background:none;border:none;color:rgba(208,197,175,.3);font-size:10px;letter-spacing:.15em;text-transform:uppercase;cursor:none!important;">Cancel</button>
-    </div>
-</div>
-
-<!-- Admin: Main Panel -->
-<div id="adm-panel" style="display:none;position:fixed;inset:0;z-index:20000;background:#080808;overflow-y:auto;">
-
-    <!-- Admin Header -->
-    <div style="position:sticky;top:0;z-index:10;background:rgba(5,5,5,.98);backdrop-filter:blur(20px);border-bottom:1px solid rgba(212,175,55,.2);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;">
-        <div style="display:flex;align-items:center;gap:1rem;">
-            <img src="https://i.ibb.co/S4fpg7Md/A-v2-c1-4x.png" style="width:36px;height:36px;object-fit:contain;" alt="Logo">
-            <div>
-                <div class="serif" style="color:#f2ca50;font-size:1.1rem;letter-spacing:.15em;text-transform:uppercase;">Admin Panel</div>
-                <div class="caps" style="color:rgba(208,197,175,.4);font-size:8px;">Asura Ink · Image Manager</div>
-            </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:1rem;">
-            <div id="adm-save-indicator" style="display:none;align-items:center;gap:.5rem;color:#4ade80;font-size:10px;letter-spacing:.15em;text-transform:uppercase;">
-                <span style="width:6px;height:6px;background:#4ade80;border-radius:50%;display:inline-block;"></span>Saved
-            </div>
-            <button onclick="closeAdmin()" style="background:none;border:1px solid rgba(212,175,55,.3);color:#f2ca50;padding:.5rem 1.25rem;font-size:9px;letter-spacing:.2em;text-transform:uppercase;cursor:none!important;transition:all .3s;" onmouseover="this.style.background='#f2ca50';this.style.color='#0a0800';" onmouseout="this.style.background='none';this.style.color='#f2ca50';">✕ Close</button>
-        </div>
-    </div>
-
-    <!-- Admin Body -->
-    <div style="max-width:1100px;margin:0 auto;padding:2.5rem 2rem;">
-
-        <!-- Notice -->
-        <div style="background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.2);border-left:3px solid #f2ca50;padding:1rem 1.25rem;margin-bottom:2.5rem;display:flex;align-items:flex-start;gap:.75rem;">
-            <span class="material-symbols-outlined" style="color:#f2ca50;font-size:1.1rem;flex-shrink:0;margin-top:1px;">info</span>
-            <div>
-                <p style="color:#f2ca50;font-size:.8rem;font-weight:600;margin-bottom:.2rem;">รูปภาพจะถูกบันทึกใน Browser (localStorage)</p>
-                <p style="color:rgba(208,197,175,.6);font-size:.75rem;line-height:1.7;">เปลี่ยนอุปกรณ์หรือ Clear Cache = รูปหาย · แนะนำใช้บน PC เดิมเสมอ · รูปที่ใหญ่มากอาจช้า ให้ Resize ก่อน (แนะนำ &lt; 1MB)</p>
-            </div>
-        </div>
-
-        <!-- ─ SECTION: Hero Background ─ -->
-        <div class="adm-section">
-            <div class="adm-section-head">
-                <span class="material-symbols-outlined" style="color:#f2ca50;">image</span>
-                <div>
-                    <h3 class="adm-title">Hero Background</h3>
-                    <p class="adm-sub">รูปพื้นหลัง Slideshow หน้าแรก (แนะนำ 1920×1080px แนวนอน)</p>
-                </div>
-            </div>
-            <div class="adm-grid" id="adm-hero-grid">
-                <div class="adm-slot" data-key="hero_0" data-target="hero_img_0">
-                    <div class="adm-slot-label">Slide 1</div>
-                    <div class="adm-preview-wrap">
-                        <img class="adm-preview" id="prev-hero_0" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-hero_0"><span class="material-symbols-outlined">add_photo_alternate</span><span>คลิกเพื่ออัพโหลด</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'hero_0','hero_img_0')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('hero_0','hero_img_0')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="hero_1" data-target="hero_img_1">
-                    <div class="adm-slot-label">Slide 2</div>
-                    <div class="adm-preview-wrap">
-                        <img class="adm-preview" id="prev-hero_1" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-hero_1"><span class="material-symbols-outlined">add_photo_alternate</span><span>คลิกเพื่ออัพโหลด</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'hero_1','hero_img_1')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('hero_1','hero_img_1')">🗑 ลบ</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ─ SECTION: Artist Profile ─ -->
-        <div class="adm-section">
-            <div class="adm-section-head">
-                <span class="material-symbols-outlined" style="color:#f2ca50;">person</span>
-                <div>
-                    <h3 class="adm-title">Artist Profile Photo</h3>
-                    <p class="adm-sub">รูปโปรไฟล์ศิลปิน (แนะนำ 1:1 หรือ 3:4 · 600×600px ขึ้นไป)</p>
-                </div>
-            </div>
-            <div class="adm-grid" style="grid-template-columns:320px;">
-                <div class="adm-slot" data-key="artist_photo">
-                    <div class="adm-slot-label">Artist Photo</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:1;">
-                        <img class="adm-preview" id="prev-artist_photo" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-artist_photo"><span class="material-symbols-outlined">person</span><span>คลิกเพื่ออัพโหลด</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'artist_photo','artist_img')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('artist_photo','artist_img')">🗑 ลบ</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ─ SECTION: Gallery ─ -->
-        <div class="adm-section">
-            <div class="adm-section-head">
-                <span class="material-symbols-outlined" style="color:#f2ca50;">collections</span>
-                <div>
-                    <h3 class="adm-title">Gallery / Portfolio</h3>
-                    <p class="adm-sub">รูปผลงานสัก 4 ชิ้นหลัก (แนะนำ 3:4 แนวตั้ง)</p>
-                </div>
-            </div>
-            <div class="adm-grid">
-                <div class="adm-slot" data-key="gallery_0">
-                    <div class="adm-slot-label">Gallery 1 · Fine Line</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:3/4;">
-                        <img class="adm-preview" id="prev-gallery_0" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-gallery_0"><span class="material-symbols-outlined">add_photo_alternate</span><span>Fine Line</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'gallery_0','gallery_img_0')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('gallery_0','gallery_img_0')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="gallery_1">
-                    <div class="adm-slot-label">Gallery 2 · Japanese</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:3/4;">
-                        <img class="adm-preview" id="prev-gallery_1" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-gallery_1"><span class="material-symbols-outlined">add_photo_alternate</span><span>Japanese</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'gallery_1','gallery_img_1')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('gallery_1','gallery_img_1')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="gallery_2">
-                    <div class="adm-slot-label">Gallery 3 · Custom</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:3/4;">
-                        <img class="adm-preview" id="prev-gallery_2" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-gallery_2"><span class="material-symbols-outlined">add_photo_alternate</span><span>Custom</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'gallery_2','gallery_img_2')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('gallery_2','gallery_img_2')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="gallery_3">
-                    <div class="adm-slot-label">Gallery 4 · Minimal</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:3/4;">
-                        <img class="adm-preview" id="prev-gallery_3" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-gallery_3"><span class="material-symbols-outlined">add_photo_alternate</span><span>Minimal</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'gallery_3','gallery_img_3')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('gallery_3','gallery_img_3')">🗑 ลบ</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ─ SECTION: Awards ─ -->
-        <div class="adm-section">
-            <div class="adm-section-head">
-                <span class="material-symbols-outlined" style="color:#f2ca50;">emoji_events</span>
-                <div>
-                    <h3 class="adm-title">Awards / Recognition</h3>
-                    <p class="adm-sub">รูปพื้นหลัง Card รางวัล (แนะนำ 16:9 หรือ 4:3)</p>
-                </div>
-            </div>
-            <div class="adm-grid">
-                <div class="adm-slot" data-key="award_0">
-                    <div class="adm-slot-label">Award 1 · Blackwork</div>
-                    <div class="adm-preview-wrap">
-                        <img class="adm-preview" id="prev-award_0" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-award_0"><span class="material-symbols-outlined">emoji_events</span><span>Award 1</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'award_0','award_img_0')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('award_0','award_img_0')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="award_1">
-                    <div class="adm-slot-label">Award 2 · Best of Show</div>
-                    <div class="adm-preview-wrap">
-                        <img class="adm-preview" id="prev-award_1" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-award_1"><span class="material-symbols-outlined">workspace_premium</span><span>Award 2</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'award_1','award_img_1')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('award_1','award_img_1')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="award_2">
-                    <div class="adm-slot-label">Award 3 · Fine Line</div>
-                    <div class="adm-preview-wrap">
-                        <img class="adm-preview" id="prev-award_2" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-award_2"><span class="material-symbols-outlined">military_tech</span><span>Award 3</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'award_2','award_img_2')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('award_2','award_img_2')">🗑 ลบ</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ─ SECTION: Sponsors ─ -->
-        <div class="adm-section">
-            <div class="adm-section-head">
-                <span class="material-symbols-outlined" style="color:#f2ca50;">handshake</span>
-                <div>
-                    <h3 class="adm-title">Sponsors &amp; Partners</h3>
-                    <p class="adm-sub">รูป Logo สปอนเซอร์ (แนะนำ 1:1 · พื้นหลังโปร่งแสงหรือสีเข้ม)</p>
-                </div>
-            </div>
-            <div class="adm-grid">
-                <div class="adm-slot" data-key="sponsor_0">
-                    <div class="adm-slot-label">Sponsor 1 · Ink Brand</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:1;">
-                        <img class="adm-preview" id="prev-sponsor_0" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-sponsor_0"><span class="material-symbols-outlined">water_drop</span><span>Ink Brand</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'sponsor_0','sponsor_img_0')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('sponsor_0','sponsor_img_0')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="sponsor_1">
-                    <div class="adm-slot-label">Sponsor 2 · Machine Pro</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:1;">
-                        <img class="adm-preview" id="prev-sponsor_1" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-sponsor_1"><span class="material-symbols-outlined">build</span><span>Machine Pro</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'sponsor_1','sponsor_img_1')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('sponsor_1','sponsor_img_1')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="sponsor_2">
-                    <div class="adm-slot-label">Sponsor 3 · Aftercare+</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:1;">
-                        <img class="adm-preview" id="prev-sponsor_2" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-sponsor_2"><span class="material-symbols-outlined">spa</span><span>Aftercare+</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'sponsor_2','sponsor_img_2')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('sponsor_2','sponsor_img_2')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="sponsor_3">
-                    <div class="adm-slot-label">Sponsor 4 · Needles Pro</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:1;">
-                        <img class="adm-preview" id="prev-sponsor_3" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-sponsor_3"><span class="material-symbols-outlined">straighten</span><span>Needles</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'sponsor_3','sponsor_img_3')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('sponsor_3','sponsor_img_3')">🗑 ลบ</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ─ SECTION: Portfolio Detail Page ─ -->
-        <div class="adm-section">
-            <div class="adm-section-head">
-                <span class="material-symbols-outlined" style="color:#f2ca50;">photo_library</span>
-                <div>
-                    <h3 class="adm-title">Portfolio Detail Page</h3>
-                    <p class="adm-sub">รูปผลงานในหน้ารายละเอียด (เพิ่มได้สูงสุด 6 รูป)</p>
-                </div>
-            </div>
-            <div class="adm-grid">
-                <div class="adm-slot" data-key="port_0">
-                    <div class="adm-slot-label">Portfolio #1</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:1;">
-                        <img class="adm-preview" id="prev-port_0" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-port_0"><span class="material-symbols-outlined">add_photo_alternate</span><span>#1</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'port_0','port_img_0')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('port_0','port_img_0')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="port_1">
-                    <div class="adm-slot-label">Portfolio #2</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:1;">
-                        <img class="adm-preview" id="prev-port_1" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-port_1"><span class="material-symbols-outlined">add_photo_alternate</span><span>#2</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'port_1','port_img_1')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('port_1','port_img_1')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="port_2">
-                    <div class="adm-slot-label">Portfolio #3</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:1;">
-                        <img class="adm-preview" id="prev-port_2" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-port_2"><span class="material-symbols-outlined">add_photo_alternate</span><span>#3</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'port_2','port_img_2')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('port_2','port_img_2')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="port_3">
-                    <div class="adm-slot-label">Portfolio #4</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:1;">
-                        <img class="adm-preview" id="prev-port_3" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-port_3"><span class="material-symbols-outlined">add_photo_alternate</span><span>#4</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'port_3','port_img_3')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('port_3','port_img_3')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="port_4">
-                    <div class="adm-slot-label">Portfolio #5</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:1;">
-                        <img class="adm-preview" id="prev-port_4" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-port_4"><span class="material-symbols-outlined">add_photo_alternate</span><span>#5</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'port_4','port_img_4')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('port_4','port_img_4')">🗑 ลบ</button>
-                    </div>
-                </div>
-                <div class="adm-slot" data-key="port_5">
-                    <div class="adm-slot-label">Portfolio #6</div>
-                    <div class="adm-preview-wrap" style="aspect-ratio:1;">
-                        <img class="adm-preview" id="prev-port_5" src="" alt="" style="display:none;">
-                        <div class="adm-placeholder" id="ph-port_5"><span class="material-symbols-outlined">add_photo_alternate</span><span>#6</span></div>
-                    </div>
-                    <div class="adm-actions">
-                        <label class="adm-upload-btn"><input type="file" accept="image/*" onchange="handleUpload(this,'port_5','port_img_5')">📁 เลือกรูป</label>
-                        <button class="adm-clear-btn" onclick="clearImg('port_5','port_img_5')">🗑 ลบ</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Storage Usage -->
-        <div style="background:#0d0d0d;border:1px solid rgba(212,175,55,.1);padding:1.25rem;margin-top:2rem;">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem;">
-                <span class="caps" style="color:rgba(208,197,175,.5);font-size:9px;">Storage Usage (localStorage)</span>
-                <span id="adm-storage-text" class="caps" style="color:#f2ca50;font-size:9px;">0 KB</span>
-            </div>
-            <div style="height:4px;background:rgba(212,175,55,.1);border-radius:2px;overflow:hidden;">
-                <div id="adm-storage-bar" style="height:100%;background:linear-gradient(to right,#d4af37,#f2ca50);width:0%;transition:width .4s;border-radius:2px;"></div>
-            </div>
-            <div style="display:flex;justify-content:space-between;margin-top:.4rem;">
-                <span style="color:rgba(208,197,175,.3);font-size:9px;">0</span>
-                <span style="color:rgba(208,197,175,.3);font-size:9px;">Max ~5MB</span>
-            </div>
-        </div>
-
-        <!-- ═══ EXPORT HTML ═══ -->
-        <div style="margin-top:2rem;background:rgba(212,175,55,.04);border:1px solid rgba(212,175,55,.25);padding:1.75rem;">
-            <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;">
-                <span class="material-symbols-outlined" style="color:#f2ca50;font-size:1.3rem;">download</span>
-                <div>
-                    <div class="caps" style="color:#f2ca50;font-size:9px;margin-bottom:.15rem;">Export HTML — สำหรับอัพ GitHub</div>
-                    <div style="color:rgba(208,197,175,.45);font-size:.72rem;">รูปทั้งหมดจะถูกฝังในไฟล์ .html โดยตรง → อัพ GitHub แล้วรูปติดไปด้วยเลย</div>
-                </div>
-            </div>
-            <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem;">
-                <div style="display:flex;align-items:center;gap:.5rem;background:rgba(212,175,55,.07);border:1px solid rgba(212,175,55,.15);padding:.4rem .75rem;font-size:9px;letter-spacing:.1em;color:rgba(208,197,175,.7);"><span style="color:#f2ca50;font-weight:700;">1</span> ใส่รูปครบแล้ว</div>
-                <div style="color:rgba(212,175,55,.3);font-size:.8rem;align-self:center;">→</div>
-                <div style="display:flex;align-items:center;gap:.5rem;background:rgba(212,175,55,.07);border:1px solid rgba(212,175,55,.15);padding:.4rem .75rem;font-size:9px;letter-spacing:.1em;color:rgba(208,197,175,.7);"><span style="color:#f2ca50;font-weight:700;">2</span> กด Export ด้านล่าง</div>
-                <div style="color:rgba(212,175,55,.3);font-size:.8rem;align-self:center;">→</div>
-                <div style="display:flex;align-items:center;gap:.5rem;background:rgba(212,175,55,.07);border:1px solid rgba(212,175,55,.15);padding:.4rem .75rem;font-size:9px;letter-spacing:.1em;color:rgba(208,197,175,.7);"><span style="color:#f2ca50;font-weight:700;">3</span> ได้ไฟล์ index.html ใหม่</div>
-                <div style="color:rgba(212,175,55,.3);font-size:.8rem;align-self:center;">→</div>
-                <div style="display:flex;align-items:center;gap:.5rem;background:rgba(212,175,55,.07);border:1px solid rgba(212,175,55,.15);padding:.4rem .75rem;font-size:9px;letter-spacing:.1em;color:rgba(208,197,175,.7);"><span style="color:#f2ca50;font-weight:700;">4</span> อัพ GitHub ✅</div>
-            </div>
-            <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-                <button id="export-btn" onclick="exportHTML()" style="display:flex;align-items:center;gap:.6rem;background:#f2ca50;color:#0a0800;border:none;padding:.8rem 1.75rem;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;cursor:none!important;transition:all .3s;">
-                    <span class="material-symbols-outlined" style="font-size:1rem;">download</span>
-                    <span id="export-btn-txt">Export &amp; Download HTML</span>
-                </button>
-                <div id="export-status" style="display:none;align-items:center;gap:.5rem;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#4ade80;">
-                    <span style="width:7px;height:7px;background:#4ade80;border-radius:50%;display:inline-block;animation:gpulse 1s infinite;"></span>
-                    <span id="export-status-txt">กำลัง Export...</span>
-                </div>
-            </div>
-            <div id="export-noimg-warn" style="display:none;margin-top:1rem;padding:.75rem 1rem;background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2);border-left:3px solid #f59e0b;">
-                <p style="color:#fbbf24;font-size:.75rem;">⚠️ ยังไม่ได้อัพรูปเลย — Export ได้ แต่จะยังใช้รูป URL เดิม (ต้องมีอินเทอร์เน็ตถึงจะเห็นรูป)</p>
-            </div>
-        </div>
-
-        <!-- Danger Zone -->
-        <div style="margin-top:1.5rem;padding:1.25rem;border:1px solid rgba(239,68,68,.2);background:rgba(239,68,68,.04);">
-            <div class="caps" style="color:#ef4444;font-size:9px;margin-bottom:.75rem;">⚠ Danger Zone</div>
-            <button onclick="clearAllImages()" style="background:none;border:1px solid rgba(239,68,68,.4);color:#ef4444;padding:.5rem 1.25rem;font-size:9px;letter-spacing:.15em;text-transform:uppercase;cursor:none!important;transition:all .3s;" onmouseover="this.style.background='rgba(239,68,68,.1)';" onmouseout="this.style.background='none';">
-                🗑 ลบรูปทั้งหมด (Reset)
-            </button>
-        </div>
-
-    </div>
-</div>
-
-<!-- Admin CSS -->
-<style>
-/* ── PIN NUMPAD ── */
-.pin-key{
-    background:#111;border:1px solid rgba(212,175,55,.15);color:#e2e2e2;
-    padding:.8rem;font-size:1.1rem;font-family:"Hanken Grotesk",sans-serif;
-    cursor:none!important;border-radius:2px;
-    transition:all .15s;
-}
-.pin-key:hover{background:rgba(212,175,55,.1);border-color:rgba(212,175,55,.4);color:#f2ca50;}
-.pin-key:active{transform:scale(.95);}
-
-/* ── ADMIN SECTION ── */
-.adm-section{
-    background:#0d0d0d;
-    border:1px solid rgba(212,175,55,.12);
-    margin-bottom:1.5rem;
-    overflow:hidden;
-}
-.adm-section-head{
-    display:flex;align-items:flex-start;gap:.75rem;
-    padding:1.25rem 1.5rem;
-    border-bottom:1px solid rgba(212,175,55,.1);
-    background:rgba(212,175,55,.03);
-}
-.adm-title{
-    font-family:"EB Garamond",serif;
-    font-size:1.1rem;color:#f2ca50;
-    text-transform:uppercase;letter-spacing:.1em;
-    margin-bottom:.2rem;
-}
-.adm-sub{color:rgba(208,197,175,.45);font-size:.75rem;}
-.adm-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
-    gap:1rem;padding:1.5rem;
-}
-
-/* ── SLOT ── */
-.adm-slot{
-    background:#111;
-    border:1px solid rgba(212,175,55,.08);
-    padding:.875rem;
-    display:flex;flex-direction:column;gap:.75rem;
-    transition:border-color .2s;
-}
-.adm-slot:hover{border-color:rgba(212,175,55,.25);}
-.adm-slot-label{
-    font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
-    color:rgba(208,197,175,.45);
-}
-
-/* ── PREVIEW ── */
-.adm-preview-wrap{
-    position:relative;aspect-ratio:16/10;background:#0A0A0A;
-    overflow:hidden;border:1px solid rgba(212,175,55,.08);
-    display:flex;align-items:center;justify-content:center;
-}
-.adm-preview{
-    width:100%;height:100%;object-fit:cover;
-    position:absolute;inset:0;
-}
-.adm-placeholder{
-    display:flex;flex-direction:column;align-items:center;gap:.4rem;
-    color:rgba(212,175,55,.25);font-size:9px;letter-spacing:.15em;text-transform:uppercase;
-}
-.adm-placeholder .material-symbols-outlined{font-size:2rem;}
-
-/* ── BUTTONS ── */
-.adm-actions{display:flex;gap:.5rem;}
-.adm-upload-btn{
-    flex:1;display:flex;align-items:center;justify-content:center;
-    background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.2);
-    color:#f2ca50;padding:.45rem .5rem;
-    font-size:9px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
-    cursor:none!important;transition:all .2s;
-}
-.adm-upload-btn:hover{background:rgba(212,175,55,.15);border-color:rgba(212,175,55,.4);}
-.adm-upload-btn input[type="file"]{display:none;}
-.adm-clear-btn{
-    background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);
-    color:rgba(239,68,68,.7);padding:.45rem .5rem;
-    font-size:10px;cursor:none!important;transition:all .2s;
-}
-.adm-clear-btn:hover{background:rgba(239,68,68,.15);border-color:rgba(239,68,68,.4);}
-
-/* ── Slot has image indicator ── */
-.adm-slot.has-img .adm-slot-label::after{
-    content:' ✓';color:#4ade80;
-}
-.adm-slot.has-img{border-color:rgba(74,222,128,.2);}
-</style>
-
-<!-- Admin JS -->
-<script>
-/* ════════════════════════════════════
-   ADMIN PANEL SYSTEM
-════════════════════════════════════ */
-const ADMIN_PASS = '1148';
-const STORAGE_NS = 'asuraink_';
-
-/* ── Map: storageKey → DOM element IDs to update ── */
-const IMG_MAP = {
-    hero_0:       ['hslide0'],
-    hero_1:       ['hslide1'],
-    artist_photo: ['artist_img'],
-    gallery_0:    ['gallery_img_0'],
-    gallery_1:    ['gallery_img_1'],
-    gallery_2:    ['gallery_img_2'],
-    gallery_3:    ['gallery_img_3'],
-    award_0:      ['award_img_0'],
-    award_1:      ['award_img_1'],
-    award_2:      ['award_img_2'],
-    sponsor_0:    ['sponsor_img_0'],
-    sponsor_1:    ['sponsor_img_1'],
-    sponsor_2:    ['sponsor_img_2'],
-    sponsor_3:    ['sponsor_img_3'],
-    port_0:       ['port_img_0'],
-    port_1:       ['port_img_1'],
-    port_2:       ['port_img_2'],
-    port_3:       ['port_img_3'],
-    port_4:       ['port_img_4'],
-    port_5:       ['port_img_5'],
-};
-
-/* ── Add IDs to all target elements in HTML ── */
-function tagElements(){
-    const hslides = document.querySelectorAll('.hslide');
-    if(hslides[0]) hslides[0].id='hslide0';
-    if(hslides[1]) hslides[1].id='hslide1';
-
-    const aphoto = document.querySelector('.photo-wrap img');
-    if(aphoto) aphoto.id='artist_img';
-
-    const gimgs = document.querySelectorAll('#ggrid .gitem img');
-    gimgs.forEach((img,i)=>{ img.id='gallery_img_'+i; });
-
-    const acards = document.querySelectorAll('.acard');
-    acards.forEach((card,i)=>{
-        const img=card.querySelector('img');
-        if(img) img.id='award_img_'+i;
-    });
-
-    const sitems = document.querySelectorAll('.sitem img');
-    sitems.forEach((img,i)=>{ img.id='sponsor_img_'+i; });
-}
-
-/* ── Load saved images on page start ── */
-function loadSavedImages(){
-    Object.keys(IMG_MAP).forEach(key=>{
-        const data = localStorage.getItem(STORAGE_NS+key);
-        if(!data) return;
-        const ids = IMG_MAP[key];
-        ids.forEach(id=>{
-            const el = document.getElementById(id);
-            if(el && el.tagName==='IMG') el.src=data;
-        });
-        /* Also update portfolio page images */
-        applyPortImages();
-    });
-}
-
-/* ── Apply portfolio page images (dynamic grid) ── */
-function applyPortImages(){
-    const wrap = document.querySelector('#ppage .adm-port-grid');
-    if(!wrap) buildPortGrid();
-}
-
-function buildPortGrid(){
-    const container = document.querySelector('#ppage > div > div:last-child');
-    if(!container) return;
-    const grid = container.querySelector('div[style*="auto-fill"]');
-    if(!grid) return;
-    grid.innerHTML='';
-    for(let i=0;i<6;i++){
-        const data=localStorage.getItem(STORAGE_NS+'port_'+i);
-        if(!data) continue;
-        const div=document.createElement('div');
-        div.style.cssText='border:1px solid rgba(212,175,55,.12);background:#111;overflow:hidden;aspect-ratio:1;position:relative;cursor:none!important;';
-        div.onmouseover=function(){this.querySelector('img').style.transform='scale(1.06)';};
-        div.onmouseout=function(){this.querySelector('img').style.transform='scale(1)';};
-        const img=document.createElement('img');
-        img.src=data; img.id='port_img_'+i;
-        img.style.cssText='width:100%;height:100%;object-fit:cover;transition:transform .6s ease;';
-        div.appendChild(img); grid.appendChild(div);
-    }
-}
-
-/* ──────────────────────────────────
-   SECRET TRIGGER: คลิกโลโก้ 5 ครั้ง
-────────────────────────────────── */
-let logoClicks=0, logoTimer=null;
-document.addEventListener('DOMContentLoaded',()=>{
-    const logo = document.querySelector('#nav a');
-    if(!logo) return;
-    logo.addEventListener('click',e=>{
-        e.preventDefault();
-        logoClicks++;
-        clearTimeout(logoTimer);
-        logoTimer=setTimeout(()=>logoClicks=0, 2000);
-        if(logoClicks>=5){
-            logoClicks=0;
-            openPinDialog();
-        }
-    });
-});
-
-/* ── PIN DIALOG ── */
-let pinBuffer='';
-
-function openPinDialog(){
-    pinBuffer='';
-    updatePinDots();
-    document.getElementById('pin-err').style.opacity='0';
-    const ov=document.getElementById('adm-pin-overlay');
-    ov.style.display='flex';
-    /* Animate in */
-    const box=ov.querySelector('div');
-    gsap.fromTo(box,{scale:.85,opacity:0},{scale:1,opacity:1,duration:.4,ease:'back.out(1.4)'});
-}
-
-document.querySelectorAll('.pin-key').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-        const v=btn.dataset.v;
-        if(v==='del'){ pinBuffer=pinBuffer.slice(0,-1); }
-        else if(v==='ok'){ checkPin(); }
-        else if(pinBuffer.length<4){ pinBuffer+=v; }
-        updatePinDots();
-        if(pinBuffer.length===4) setTimeout(checkPin,120);
-    });
-});
-
-function updatePinDots(){
-    document.querySelectorAll('.pin-dot').forEach((dot,i)=>{
-        dot.style.background = i<pinBuffer.length ? '#f2ca50' : 'transparent';
-        dot.style.borderColor = i<pinBuffer.length ? '#f2ca50' : 'rgba(212,175,55,.4)';
-        dot.style.boxShadow   = i<pinBuffer.length ? '0 0 8px rgba(212,175,55,.5)' : 'none';
-    });
-}
-
-function checkPin(){
-    if(pinBuffer===ADMIN_PASS){
-        document.getElementById('adm-pin-overlay').style.display='none';
-        openAdmin();
-    } else {
-        document.getElementById('pin-err').style.opacity='1';
-        const box=document.querySelector('#adm-pin-overlay div');
-        gsap.to(box,{x:-10,duration:.05,yoyo:true,repeat:5,ease:'power2.inOut',
-            onComplete:()=>{ pinBuffer=''; updatePinDots(); }});
-    }
-}
-
-/* ── OPEN ADMIN PANEL ── */
-function openAdmin(){
-    const panel=document.getElementById('adm-panel');
-    panel.style.display='block';
-    gsap.from(panel,{opacity:0,y:30,duration:.4,ease:'power2.out'});
-    document.body.style.overflow='hidden';
-    loadAdminPreviews();
-    updateStorageBar();
-}
-
-function closeAdmin(){
-    const panel=document.getElementById('adm-panel');
-    gsap.to(panel,{opacity:0,duration:.3,onComplete:()=>{
-        panel.style.display='none';
-        document.body.style.overflow='';
-    }});
-}
-
-/* ── Load previews inside admin panel ── */
-function loadAdminPreviews(){
-    Object.keys(IMG_MAP).forEach(key=>{
-        const data=localStorage.getItem(STORAGE_NS+key);
-        const prev=document.getElementById('prev-'+key);
-        const ph  =document.getElementById('ph-'+key);
-        const slot=prev?.closest('.adm-slot');
-        if(prev&&data){
-            prev.src=data; prev.style.display='block';
-            if(ph) ph.style.display='none';
-            if(slot) slot.classList.add('has-img');
-        } else {
-            if(prev) prev.style.display='none';
-            if(ph) ph.style.display='flex';
-            if(slot) slot.classList.remove('has-img');
-        }
-    });
-}
-
-/* ── HANDLE UPLOAD ── */
-function handleUpload(input, key, targetId){
-    const file=input.files[0];
-    if(!file) return;
-
-    /* Size warning > 1.5MB */
-    if(file.size > 1.5*1024*1024){
-        if(!confirm(`รูปนี้ขนาด ${(file.size/1024/1024).toFixed(1)}MB อาจใช้ Storage เยอะ\nต้องการอัพโหลดต่อไหม?`)) return;
-    }
-
-    const reader=new FileReader();
-    reader.onload=function(e){
-        const b64=e.target.result;
-        try {
-            localStorage.setItem(STORAGE_NS+key, b64);
-        } catch(err){
-            alert('⚠️ Storage เต็ม! กรุณาลบรูปบางรูปก่อน หรือใช้รูปที่มีขนาดเล็กกว่านี้');
-            return;
-        }
-
-        /* Update preview in admin */
-        const prev=document.getElementById('prev-'+key);
-        const ph  =document.getElementById('ph-'+key);
-        const slot=prev?.closest('.adm-slot');
-        if(prev){ prev.src=b64; prev.style.display='block'; }
-        if(ph) ph.style.display='none';
-        if(slot) slot.classList.add('has-img');
-
-        /* Update live page */
-        const ids=IMG_MAP[key]||[targetId];
-        ids.forEach(id=>{
-            const el=document.getElementById(id);
-            if(el && el.tagName==='IMG') el.src=b64;
-        });
-
-        /* Special: hero slides update src array */
-        if(key==='hero_0'||key==='hero_1') refreshHeroSlider();
-        /* Special: portfolio page */
-        if(key.startsWith('port_')) buildPortGrid();
-
-        showSaved();
-        updateStorageBar();
-    };
-    reader.readAsDataURL(file);
-}
-
-/* ── CLEAR IMAGE ── */
-function clearImg(key, targetId){
-    if(!confirm('ลบรูปนี้ออก?')) return;
-    localStorage.removeItem(STORAGE_NS+key);
-
-    const prev=document.getElementById('prev-'+key);
-    const ph  =document.getElementById('ph-'+key);
-    const slot=prev?.closest('.adm-slot');
-    if(prev){ prev.src=''; prev.style.display='none'; }
-    if(ph) ph.style.display='flex';
-    if(slot) slot.classList.remove('has-img');
-
-    /* Restore default src */
-    const defaults={
-        hero_0:'https://i.ibb.co/FqHF4Lbn/IMG-1728.jpg',
-        hero_1:'https://i.ibb.co/PG9D3yHm/IMG-1726.jpg',
-        artist_photo:'https://i.ibb.co/qtjDFyj/IMG-1730.jpg',
-        gallery_0:'https://cdn.discordapp.com/attachments/1032543542482051092/1517538017567445153/IMG_1431.jpg?ex=6a36a4e9&is=6a355369&hm=7d8f27915ef8b87ef8c85917bc2063af22effe9765ebeea63d59ffba7ece1df0&',
-        gallery_1:'https://cdn.discordapp.com/attachments/1032543542482051092/1517538034667622430/IMG_1428.jpg?ex=6a36a4ed&is=6a35536d&hm=16712e0e95d66e437c07413d68a3fed6fb3dc9916c17f4e5c2af2845b7057431&',
-        gallery_2:'https://cdn.discordapp.com/attachments/1032543542482051092/1517538029680722040/IMG_1429.jpg?ex=6a36a4ec&is=6a35536c&hm=1449393421b077594888feef2e04aae5d7061d9c96901ea38ddbe35af2d0c467&',
-        gallery_3:'https://cdn.discordapp.com/attachments/1032543542482051092/1517538040887771146/IMG_1427.jpg?ex=6a36a4ef&is=6a35536f&hm=9908afb1acf478f1d4f3f451d8290dd0997ad34723bebebaa1dc09a98ca45893&',
-        award_0:'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=800',
-        award_1:'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&q=80&w=800',
-        award_2:'https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&q=80&w=800',
-        sponsor_0:'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=200',
-        sponsor_1:'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&q=80&w=200',
-        sponsor_2:'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=200',
-        sponsor_3:'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=200',
-    };
-    const ids=IMG_MAP[key]||[targetId];
-    ids.forEach(id=>{
-        const el=document.getElementById(id);
-        if(el && el.tagName==='IMG') el.src=defaults[key]||'';
-    });
-    if(key.startsWith('port_')) buildPortGrid();
-    showSaved();
-    updateStorageBar();
-}
-
-/* ── CLEAR ALL ── */
-function clearAllImages(){
-    if(!confirm('⚠️ ลบรูปทั้งหมดออก?\nเว็บจะกลับไปใช้รูป Default')) return;
-    Object.keys(IMG_MAP).forEach(key=>{
-        localStorage.removeItem(STORAGE_NS+key);
-    });
-    loadAdminPreviews();
-    loadSavedImages();
-    updateStorageBar();
-    showSaved();
-}
-
-/* ── REFRESH HERO SLIDER ── */
-function refreshHeroSlider(){
-    const s0=document.getElementById('hslide0');
-    const s1=document.getElementById('hslide1');
-    const d0=localStorage.getItem(STORAGE_NS+'hero_0');
-    const d1=localStorage.getItem(STORAGE_NS+'hero_1');
-    if(s0&&d0) s0.src=d0;
-    if(s1&&d1) s1.src=d1;
-}
-
-/* ── SHOW SAVED INDICATOR ── */
-function showSaved(){
-    const ind=document.getElementById('adm-save-indicator');
-    ind.style.display='flex';
-    setTimeout(()=>ind.style.display='none',2000);
-}
-
-/* ── STORAGE BAR ── */
-function updateStorageBar(){
-    let total=0;
-    Object.keys(IMG_MAP).forEach(k=>{
-        const v=localStorage.getItem(STORAGE_NS+k);
-        if(v) total+=v.length;
-    });
-    const kb=(total/1024).toFixed(1);
-    const pct=Math.min((total/(5*1024*1024))*100,100);
-    document.getElementById('adm-storage-text').textContent=kb+' KB';
-    document.getElementById('adm-storage-bar').style.width=pct+'%';
-    document.getElementById('adm-storage-bar').style.background=
-        pct>80?'linear-gradient(to right,#ef4444,#f87171)':
-        pct>60?'linear-gradient(to right,#f59e0b,#fbbf24)':
-        'linear-gradient(to right,#d4af37,#f2ca50)';
-}
-
-/* ════════════════════════════════════
-   EXPORT HTML — ฝังรูปเข้าโค้ดโดยตรง
-════════════════════════════════════ */
-function exportHTML(){
-    const btn    = document.getElementById('export-btn');
-    const btnTxt = document.getElementById('export-btn-txt');
-    const status = document.getElementById('export-status');
-    const stTxt  = document.getElementById('export-status-txt');
-    const warn   = document.getElementById('export-noimg-warn');
-
-    /* ── Check if any images saved ── */
-    let hasAnyImg = false;
-    Object.keys(IMG_MAP).forEach(k=>{
-        if(localStorage.getItem(STORAGE_NS+k)) hasAnyImg=true;
-    });
-    warn.style.display = hasAnyImg ? 'none' : 'block';
-
-    /* ── Show loading state ── */
-    btn.style.opacity='0.6';
-    btn.style.pointerEvents='none';
-    btnTxt.textContent='กำลัง Export...';
-    status.style.display='flex';
-    stTxt.textContent='กำลังอ่านโค้ด...';
-
-    /* ── Use setTimeout so UI updates before heavy work ── */
-    setTimeout(()=>{
-        try {
-            stTxt.textContent='กำลังฝังรูปภาพ...';
-
-            /* 1. Get current HTML of the whole page */
-            let html = document.documentElement.outerHTML;
-
-            /* 2. Replace every img src that has a saved Base64 version
-                  We match both attribute forms: src="..." and src='...' */
-            const allKeys = Object.keys(IMG_MAP);
-            let replaceCount = 0;
-
-            allKeys.forEach(key=>{
-                const b64 = localStorage.getItem(STORAGE_NS+key);
-                if(!b64) return;
-
-                /* Get current src of each target element */
-                const ids = IMG_MAP[key];
-                ids.forEach(id=>{
-                    const el = document.getElementById(id);
-                    if(!el || el.tagName!=='IMG') return;
-
-                    /* Escape the current src for use in regex */
-                    const currentSrc = el.src; /* absolute URL */
-                    const escapedSrc = currentSrc.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-
-                    /* Replace src="<currentSrc>" → src="<base64>" */
-                    const re = new RegExp('src=["\']'+escapedSrc+'["\']','g');
-                    const newAttr = 'src="'+b64+'"';
-                    const before = html.length;
-                    html = html.replace(re, newAttr);
-                    if(html.length !== before) replaceCount++;
-
-                    /* Also try relative / original src from attributes
-                       Some browsers normalize src to absolute, so also
-                       try to replace data-original-src if any */
-                });
-            });
-
-            /* 3. Also patch hero slides by their class since they use
-                  hslide IDs which may not be set yet in outerHTML snapshot */
-            const hslide0 = localStorage.getItem(STORAGE_NS+'hero_0');
-            const hslide1 = localStorage.getItem(STORAGE_NS+'hero_1');
-            if(hslide0){
-                /* Match the first hslide img src */
-                html = html.replace(/(class="hslide"[^>]*?src=["'])([^"']+)(["'])/,
-                    (_,pre,__,post)=>pre+hslide0+post);
-            }
-            if(hslide1){
-                /* Match second hslide */
-                let count=0;
-                html = html.replace(/(class="hslide"[^>]*?src=["'])([^"']+)(["'])/g,
-                    (_,pre,__,post)=>{ count++; return count===2?pre+hslide1+post:_; });
-            }
-
-            /* 4. Strip out the entire Admin Panel UI from exported file
-                  so visitors never see it (keeps file smaller & cleaner) */
-            /* Remove admin pin overlay */
-            html = html.replace(/<!-- Admin: PIN Dialog -->[\s\S]*?<!-- Admin: Main Panel -->/,'');
-            /* Remove admin panel div */
-            html = html.replace(/<!-- Admin: Main Panel -->[\s\S]*?<\/div>\s*\n\s*<!-- Admin CSS -->/,'');
-            /* Remove admin CSS block */
-            html = html.replace(/<!-- Admin CSS -->[\s\S]*?<\/style>\s*\n\s*<!-- Admin JS -->/,'');
-            /* Remove admin JS block */
-            html = html.replace(/<!-- Admin JS -->[\s\S]*?<\/script>\s*\n<\/body>/,'</body>');
-
-            /* 5. Insert a comment so you know it's an exported version */
-            const exportDate = new Date().toLocaleString('th-TH');
-            html = html.replace('<html','<!-- ASURA INK EXPORTED: '+exportDate+' -->\n<html');
-
-            stTxt.textContent='กำลัง Download...';
-
-            /* 6. Trigger download */
-            const blob = new Blob([html],{type:'text/html;charset=utf-8'});
-            const url  = URL.createObjectURL(blob);
-            const a    = document.createElement('a');
-            a.href     = url;
-            a.download = 'index.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-
-            /* 7. Success state */
-            stTxt.textContent = replaceCount > 0
-                ? '✅ Export สำเร็จ! (' + replaceCount + ' รูปฝังเรียบร้อย)'
-                : '✅ Export สำเร็จ! (ใช้รูป URL เดิม)';
-            status.style.display='flex';
-
-            btn.style.opacity='1';
-            btn.style.pointerEvents='auto';
-            btnTxt.textContent='Export & Download HTML';
-
-            setTimeout(()=>{ status.style.display='none'; }, 4000);
-
-        } catch(err){
-            stTxt.textContent='❌ Error: '+err.message;
-            btn.style.opacity='1';
-            btn.style.pointerEvents='auto';
-            btnTxt.textContent='Export & Download HTML';
-            console.error('Export error:',err);
-        }
-    }, 80);
-}
-
-/* ── INIT on page load ── */
-document.addEventListener('DOMContentLoaded',()=>{
-    tagElements();
-    loadSavedImages();
+    if(e.key==='Escape'){ /* reserved for future modals */ }
 });
 </script>
 </body>
