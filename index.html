@@ -10,8 +10,6 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://i.ibb.co/S4fpg7Md/A-v2-c1-4x.png">
     <link rel="icon" href="https://i.ibb.co/S4fpg7Md/A-v2-c1-4x.png">
-
-    <!-- LocalBusiness Schema (SEO) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -27,11 +25,7 @@
             "postalCode": "20150",
             "addressCountry": "TH"
         },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 12.9351,
-            "longitude": 100.8825
-        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 12.9351, "longitude": 100.8825 },
         "telephone": "+66924263914",
         "url": "https://asuraink.com",
         "priceRange": "฿฿",
@@ -41,15 +35,8 @@
             "opens": "11:00",
             "closes": "20:00"
         },
-        "sameAs": [
-            "https://www.instagram.com/asuraink_tattoo",
-            "https://www.facebook.com/Asura.tattoo2025"
-        ],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "6"
-        }
+        "sameAs": ["https://www.instagram.com/asuraink_tattoo","https://www.facebook.com/Asura.tattoo2025"],
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "8" }
     }
     </script>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -60,204 +47,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 <style>
-/* ============================
-   RESET & BASE
-============================ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{
-    background:#0A0A0A;
-    color:#e2e2e2;
-    font-family:"Hanken Grotesk",system-ui,sans-serif;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-}
+body{background:#0A0A0A;color:#e2e2e2;font-family:"Hanken Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 ::selection{background:#f2ca50;color:#0A0A0A;}
-
-/* ============================
-   CUSTOM CURSOR
-============================ */
 *{cursor:none!important;}
-#cur-dot{
-    width:8px;height:8px;
-    background:#f2ca50;
-    border-radius:50%;
-    position:fixed;top:0;left:0;
-    pointer-events:none;z-index:99999;
-    transform:translate(-50%,-50%);
-    transition:width .15s,height .15s;
-    mix-blend-mode:difference;
-}
-#cur-ring{
-    width:38px;height:38px;
-    border:1px solid rgba(242,202,80,.5);
-    border-radius:50%;
-    position:fixed;top:0;left:0;
-    pointer-events:none;z-index:99998;
-    transform:translate(-50%,-50%);
-    transition:width .3s,height .3s,border-color .2s;
-}
+#cur-dot{width:8px;height:8px;background:#f2ca50;border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .15s,height .15s;mix-blend-mode:difference;}
+#cur-ring{width:38px;height:38px;border:1px solid rgba(242,202,80,.5);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .2s;}
 body.c-hover #cur-dot{width:14px;height:14px;}
 body.c-hover #cur-ring{width:56px;height:56px;border-color:#f2ca50;}
 @media(pointer:coarse){#cur-dot,#cur-ring{display:none;}*{cursor:auto!important;}}
-
-/* ============================
-   NOISE OVERLAY
-============================ */
-body::after{
-    content:'';
-    position:fixed;inset:0;
-    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    opacity:.022;pointer-events:none;z-index:9990;
-}
-
-/* ============================
-   TYPOGRAPHY
-============================ */
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.022;pointer-events:none;z-index:9990;}
 .serif{font-family:"EB Garamond",Georgia,serif;}
-.gold{
-    background:linear-gradient(135deg,#ffe088 0%,#f2ca50 40%,#d4af37 70%,#f2ca50 100%);
-    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-    background-clip:text;background-size:200%;
-    animation:shimmer 5s ease-in-out infinite;
-}
+.gold{background:linear-gradient(135deg,#ffe088 0%,#f2ca50 40%,#d4af37 70%,#f2ca50 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200%;animation:shimmer 5s ease-in-out infinite;}
 @keyframes shimmer{0%,100%{background-position:0%}50%{background-position:100%}}
 .caps{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;}
 .divider{width:48px;height:1px;background:#d4af37;opacity:.5;margin:0 auto;}
-.eyebrow{
-    display:inline-flex;align-items:center;gap:1rem;
-    font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:#f2ca50;
-}
+.eyebrow{display:inline-flex;align-items:center;gap:1rem;font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:#f2ca50;}
 .eyebrow::before,.eyebrow::after{content:'';width:24px;height:1px;background:#f2ca50;opacity:.5;}
-
-/* ============================
-   BUTTONS
-============================ */
-.btn-p{
-    position:relative;overflow:hidden;
-    background:#f2ca50;color:#0a0800;
-    padding:.9rem 2rem;
-    font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
-    display:inline-flex;align-items:center;gap:.5rem;
-    text-decoration:none;transition:box-shadow .3s;
-    border:none;
-}
-.btn-p::before{
-    content:'';position:absolute;inset:0;background:#ffe088;
-    transform:translateX(-101%);
-    transition:transform .4s cubic-bezier(.4,0,.2,1);
-}
+.btn-p{position:relative;overflow:hidden;background:#f2ca50;color:#0a0800;padding:.9rem 2rem;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;transition:box-shadow .3s;border:none;}
+.btn-p::before{content:'';position:absolute;inset:0;background:#ffe088;transform:translateX(-101%);transition:transform .4s cubic-bezier(.4,0,.2,1);}
 .btn-p:hover::before{transform:translateX(0);}
 .btn-p:hover{box-shadow:0 0 40px rgba(212,175,55,.5);}
 .btn-p span{position:relative;z-index:1;}
-
-.btn-s{
-    position:relative;overflow:hidden;
-    border:1px solid rgba(242,202,80,.5);color:#f2ca50;
-    padding:.9rem 2rem;
-    font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
-    display:inline-flex;align-items:center;gap:.5rem;
-    text-decoration:none;transition:all .3s;background:none;
-}
+.btn-s{position:relative;overflow:hidden;border:1px solid rgba(242,202,80,.5);color:#f2ca50;padding:.9rem 2rem;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;transition:all .3s;background:none;}
 .btn-s:hover{background:rgba(242,202,80,.07);border-color:#f2ca50;box-shadow:0 0 25px rgba(212,175,55,.12);}
-
 .mag{display:inline-block;}
-
-/* ============================
-   SCROLL PROGRESS
-============================ */
-#progress{
-    position:fixed;top:0;left:0;height:2px;z-index:9999;width:0%;
-    background:linear-gradient(to right,#d4af37,#f2ca50,#ffe088);
-    box-shadow:0 0 10px rgba(212,175,55,.7);
-}
-
-/* ============================
-   WELCOME SCREEN
-============================ */
-#welcome{
-    position:fixed;inset:0;z-index:9997;
-    background:#0A0A0A;
-    display:flex;align-items:center;justify-content:center;
-}
-.wp{
-    position:absolute;border-radius:50%;
-    background:radial-gradient(circle,rgba(212,175,55,.7),transparent);
-    pointer-events:none;
-    animation:fp linear infinite;
-}
-@keyframes fp{
-    0%{transform:translateY(100vh) scale(0);opacity:0;}
-    10%{opacity:.8;}90%{opacity:.2;}
-    100%{transform:translateY(-20vh) scale(2);opacity:0;}
-}
-#wbtn{
-    position:relative;overflow:hidden;
-    border:1px solid rgba(242,202,80,.35);
-    background:rgba(0,0,0,.5);backdrop-filter:blur(8px);
-    padding:1.2rem 3.5rem;cursor:none!important;
-    transition:border-color .4s,box-shadow .4s;
-}
-#wbtn .wfill{
-    position:absolute;inset:0;background:#f2ca50;
-    transform:translateX(-101%);
-    transition:transform .5s cubic-bezier(.4,0,.2,1);
-}
+#progress{position:fixed;top:0;left:0;height:2px;z-index:9999;width:0%;background:linear-gradient(to right,#d4af37,#f2ca50,#ffe088);box-shadow:0 0 10px rgba(212,175,55,.7);}
+#welcome{position:fixed;inset:0;z-index:9997;background:#0A0A0A;display:flex;align-items:center;justify-content:center;}
+.wp{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,.7),transparent);pointer-events:none;animation:fp linear infinite;}
+@keyframes fp{0%{transform:translateY(100vh) scale(0);opacity:0;}10%{opacity:.8;}90%{opacity:.2;}100%{transform:translateY(-20vh) scale(2);opacity:0;}}
+#wbtn{position:relative;overflow:hidden;border:1px solid rgba(242,202,80,.35);background:rgba(0,0,0,.5);backdrop-filter:blur(8px);padding:1.2rem 3.5rem;cursor:none!important;transition:border-color .4s,box-shadow .4s;}
+#wbtn .wfill{position:absolute;inset:0;background:#f2ca50;transform:translateX(-101%);transition:transform .5s cubic-bezier(.4,0,.2,1);}
 #wbtn:hover .wfill{transform:translateX(0);}
 #wbtn:hover{border-color:#f2ca50;box-shadow:0 0 50px rgba(212,175,55,.25);}
-#wbtn .wtxt{
-    position:relative;z-index:1;
-    font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;
-    color:#f2ca50;transition:color .3s;
-}
+#wbtn .wtxt{position:relative;z-index:1;font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:#f2ca50;transition:color .3s;}
 #wbtn:hover .wtxt{color:#0a0800;}
-
-/* ============================
-   NAV
-============================ */
-#nav{
-    position:fixed;top:0;width:100%;z-index:500;
-    display:flex;justify-content:space-between;align-items:center;
-    padding:0 2rem;height:72px;
-    background:rgba(10,10,10,.75);
-    backdrop-filter:blur(20px);
-    border-bottom:1px solid rgba(212,175,55,.1);
-    transition:background .4s,border-color .4s,height .3s;
-}
+#nav{position:fixed;top:0;width:100%;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:0 2rem;height:72px;background:rgba(10,10,10,.75);backdrop-filter:blur(20px);border-bottom:1px solid rgba(212,175,55,.1);transition:background .4s,border-color .4s,height .3s;}
 #nav.scrolled{background:rgba(4,4,4,.97);border-color:rgba(212,175,55,.25);height:60px;}
-.nlink{
-    font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
-    color:rgba(208,197,175,.65);text-decoration:none;
-    position:relative;padding-bottom:2px;transition:color .3s;
-}
-.nlink::after{
-    content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;
-    background:#f2ca50;transform:scaleX(0);transform-origin:left;
-    transition:transform .35s cubic-bezier(.4,0,.2,1);
-}
+.nlink{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:rgba(208,197,175,.65);text-decoration:none;position:relative;padding-bottom:2px;transition:color .3s;}
+.nlink::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;background:#f2ca50;transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.4,0,.2,1);}
 .nlink:hover{color:#f2ca50;}
 .nlink:hover::after{transform:scaleX(1);}
-
-/* Mobile menu */
-#mmenu{
-    position:fixed;inset-y:0;right:0;z-index:600;width:280px;
-    background:#050505;border-left:1px solid rgba(212,175,55,.15);
-    padding:5rem 2rem 2.5rem;
-    display:flex;flex-direction:column;
-    transform:translateX(100%);
-    transition:transform .4s cubic-bezier(.4,0,.2,1);
-}
+#mmenu{position:fixed;inset-y:0;right:0;z-index:600;width:280px;background:#050505;border-left:1px solid rgba(212,175,55,.15);padding:5rem 2rem 2.5rem;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .4s cubic-bezier(.4,0,.2,1);}
 #mmenu.open{transform:translateX(0);}
-#moverlay{
-    position:fixed;inset:0;z-index:590;
-    background:rgba(0,0,0,.7);backdrop-filter:blur(4px);
-    display:none;
-}
+#moverlay{position:fixed;inset:0;z-index:590;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);display:none;}
 .hline{display:block;width:24px;height:1px;background:#f2ca50;transition:all .35s cubic-bezier(.4,0,.2,1);}
-
-/* ============================
-   HERO
-============================ */
 #hero{position:relative;width:100%;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;}
 #hslide-wrap{position:absolute;inset:-10% 0;will-change:transform;}
 .hslide{position:absolute;inset:0;width:100%;height:110%;object-fit:cover;transition:opacity 1.5s ease-in-out;}
@@ -266,165 +101,105 @@ body::after{
 .scroll-ind{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;z-index:3;}
 .sline{width:1px;height:56px;background:linear-gradient(to bottom,#f2ca50,transparent);animation:spulse 2s ease-in-out infinite;}
 @keyframes spulse{0%,100%{opacity:.3;transform:scaleY(1);}50%{opacity:1;transform:scaleY(1.15);}}
-
-/* ============================
-   STATS
-============================ */
 .stat-n{font-family:"EB Garamond",serif;font-size:3rem;line-height:1;}
-
-/* ============================
-   ARTIST — spinning glow ring
-============================ */
 .photo-wrap{position:relative;display:inline-block;flex-shrink:0;}
-.photo-wrap::before{
-    content:'';position:absolute;inset:-3px;border-radius:.75rem;
-    background:conic-gradient(from 0deg,#f2ca50,#d4af37,transparent,#f2ca50);
-    animation:spin 5s linear infinite;opacity:.35;
-}
+.photo-wrap::before{content:'';position:absolute;inset:-3px;border-radius:.75rem;background:conic-gradient(from 0deg,#f2ca50,#d4af37,transparent,#f2ca50);animation:spin 5s linear infinite;opacity:.35;}
 @keyframes spin{to{transform:rotate(360deg);}}
 .photo-wrap img{position:relative;z-index:1;}
-
-/* ============================
-   GALLERY
-============================ */
 .gitem{position:relative;overflow:hidden;cursor:none!important;}
-.gitem .ripple{
-    position:absolute;inset:0;z-index:2;pointer-events:none;
-    background:radial-gradient(circle at var(--rx,50%) var(--ry,50%),rgba(212,175,55,.14) 0%,transparent 65%);
-    opacity:0;transition:opacity .5s;
-}
+.gitem .ripple{position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(circle at var(--rx,50%) var(--ry,50%),rgba(212,175,55,.14) 0%,transparent 65%);opacity:0;transition:opacity .5s;}
 .gitem:hover .ripple{opacity:1;}
 .gitem img{will-change:transform;}
-.gcta{
-    display:inline-flex;align-items:center;gap:.5rem;
-    border:1px solid #f2ca50;color:#f2ca50;
-    padding:.55rem 1rem;font-size:9px;letter-spacing:.2em;
-    text-transform:uppercase;font-weight:600;
-    background:rgba(0,0,0,.5);transition:all .3s;
-}
+.gcta{display:inline-flex;align-items:center;gap:.5rem;border:1px solid #f2ca50;color:#f2ca50;padding:.55rem 1rem;font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;background:rgba(0,0,0,.5);transition:all .3s;}
 .gitem:hover .gcta{background:#f2ca50;color:#0a0800;}
-.ftab{
-    font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
-    color:rgba(208,197,175,.55);
-    padding:.45rem 1.1rem;
-    border:1px solid rgba(212,175,55,.1);
-    background:none;cursor:none!important;transition:all .3s;
-}
+.ftab{font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:rgba(208,197,175,.55);padding:.45rem 1.1rem;border:1px solid rgba(212,175,55,.1);background:none;cursor:none!important;transition:all .3s;}
 .ftab.active,.ftab:hover{color:#f2ca50;border-color:rgba(212,175,55,.45);background:rgba(212,175,55,.04);}
-
-/* ============================
-   REVIEWS — marquee
-============================ */
-.mtrack{
-    display:flex;gap:1.5rem;width:max-content;
-    animation:marquee 32s linear infinite;
-}
+.mtrack{display:flex;gap:1.5rem;width:max-content;animation:marquee 32s linear infinite;}
 .mtrack:hover{animation-play-state:paused;}
 @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-
-/* ============================
-   FAQ
-============================ */
+.atrack{display:flex;gap:1.5rem;width:max-content;animation:awardmarquee 38s linear infinite;}
+.atrack:hover{animation-play-state:paused;}
+@keyframes awardmarquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.acard{flex-shrink:0;width:220px;aspect-ratio:3/4;border:1px solid rgba(212,175,55,.15);background:#111313;overflow:hidden;position:relative;}
+.acard img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.acard:hover img{transform:scale(1.08);}
+.acard .acap{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.1) 55%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1rem;}
 .fans{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.4,0,.2,1);}
 .fans.open{max-height:400px;}
 .ficon{transition:transform .4s cubic-bezier(.4,0,.2,1);}
 .fitem{border-left:2px solid transparent;transition:border-color .3s;}
 .fitem.fopen{border-color:#f2ca50;}
 .fitem.fopen .ficon{transform:rotate(45deg);}
-
-/* ============================
-   MODAL
-============================ */
-.modal{
-    position:fixed;inset:0;z-index:700;
-    background:rgba(0,0,0,.96);backdrop-filter:blur(16px);
-    display:none;align-items:center;justify-content:center;
-    opacity:0;transition:opacity .35s;
-}
+.modal{position:fixed;inset:0;z-index:700;background:rgba(0,0,0,.96);backdrop-filter:blur(16px);display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .35s;}
 .modal.mopen{display:flex;}
 .modal.mvis{opacity:1;}
 .mbox{transform:scale(.92) translateY(20px);transition:transform .4s cubic-bezier(.4,0,.2,1);}
 .modal.mvis .mbox{transform:scale(1) translateY(0);}
-
-/* ============================
-   GLASS CARD
-============================ */
-.glass{
-    background:rgba(18,20,20,.55);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(212,175,55,.12);
-    transition:border-color .3s,box-shadow .3s,transform .3s;
-}
-.glass:hover{
-    border-color:rgba(212,175,55,.28);
-    box-shadow:0 8px 40px rgba(0,0,0,.4),0 0 18px rgba(212,175,55,.06);
-    transform:translateY(-4px);
-}
-
-/* ============================
-   FLOATING BTN
-============================ */
+.glass{background:rgba(18,20,20,.55);backdrop-filter:blur(12px);border:1px solid rgba(212,175,55,.12);transition:border-color .3s,box-shadow .3s,transform .3s;}
+.glass:hover{border-color:rgba(212,175,55,.28);box-shadow:0 8px 40px rgba(0,0,0,.4),0 0 18px rgba(212,175,55,.06);transform:translateY(-4px);}
 #fbtn{animation:fpulse 3s ease-in-out infinite;}
-@keyframes fpulse{
-    0%,100%{box-shadow:0 0 20px rgba(212,175,55,.3);}
-    50%{box-shadow:0 0 45px rgba(212,175,55,.65),0 0 80px rgba(212,175,55,.18);}
-}
-
-/* ============================
-   STATUS PULSE
-============================ */
+@keyframes fpulse{0%,100%{box-shadow:0 0 20px rgba(212,175,55,.3);}50%{box-shadow:0 0 45px rgba(212,175,55,.65),0 0 80px rgba(212,175,55,.18);}}
 @keyframes gpulse{0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,.4);}50%{box-shadow:0 0 0 5px rgba(74,222,128,0);}}
 .gpulse{animation:gpulse 2s infinite;}
-
-/* ============================
-   FOOTER GLOW LINE
-============================ */
 .fglow{height:1px;background:linear-gradient(to right,transparent,#d4af37,transparent);opacity:.35;}
-
-/* ============================
-   BACK TO TOP
-============================ */
-#btt{display:none;position:fixed;bottom:1.5rem;left:1.5rem;z-index:400;
-    background:#0A0A0A;border:1px solid rgba(212,175,55,.35);color:#f2ca50;
-    padding:.55rem 1rem;border-radius:9999px;
-    font-size:9px;letter-spacing:.25em;text-transform:uppercase;font-weight:600;
-    cursor:none!important;transition:all .3s;}
+#btt{display:none;position:fixed;bottom:1.5rem;left:1.5rem;z-index:400;background:#0A0A0A;border:1px solid rgba(212,175,55,.35);color:#f2ca50;padding:.55rem 1rem;border-radius:9999px;font-size:9px;letter-spacing:.25em;text-transform:uppercase;font-weight:600;cursor:none!important;transition:all .3s;}
 #btt:hover{background:#f2ca50;color:#0a0800;}
+@media(max-width:640px){#ggrid{grid-template-columns:1fr!important;}#ggrid .gitem{margin-top:0!important;}#ggrid .gitem:nth-child(even){margin-top:0!important;}}
+@media(max-width:768px){#ggrid{grid-template-columns:1fr!important;}}
 
 /* ============================
-   RESPONSIVE
+   LIGHTBOX
 ============================ */
-@media(max-width:640px){
-    #ggrid{grid-template-columns:1fr!important;}
-    #ggrid .gitem{margin-top:0!important;}
-    #ggrid .gitem:nth-child(even){margin-top:0!important;}
+#lightbox{
+    position:fixed;inset:0;z-index:800;
+    background:rgba(0,0,0,.96);backdrop-filter:blur(16px);
+    display:none;align-items:center;justify-content:center;
+    opacity:0;transition:opacity .35s;padding:2rem;
 }
+#lightbox.lb-open{display:flex;}
+#lightbox.lb-vis{opacity:1;}
+#lightbox .lb-box{
+    position:relative;max-width:min(90vw,900px);max-height:85vh;
+    transform:scale(.94);transition:transform .4s cubic-bezier(.4,0,.2,1);
+    display:flex;flex-direction:column;align-items:center;
+}
+#lightbox.lb-vis .lb-box{transform:scale(1);}
+#lightbox img{max-width:100%;max-height:70vh;object-fit:contain;border:1px solid rgba(212,175,55,.2);}
+#lightbox .lb-cap{text-align:center;margin-top:1.25rem;}
+#lightbox .lb-close{
+    position:absolute;top:-2.5rem;right:0;
+    background:none;border:none;color:#f2ca50;cursor:none!important;
+    padding:.5rem;
+}
+#lightbox .lb-nav{
+    position:absolute;top:50%;transform:translateY(-50%);
+    background:rgba(0,0,0,.6);border:1px solid rgba(212,175,55,.3);color:#f2ca50;
+    width:44px;height:44px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    cursor:none!important;transition:all .25s;
+}
+#lightbox .lb-nav:hover{background:#f2ca50;color:#0a0800;}
+#lightbox .lb-prev{left:-1.25rem;}
+#lightbox .lb-next{right:-1.25rem;}
 @media(max-width:768px){
-    #ggrid{grid-template-columns:1fr!important;}
+    #lightbox .lb-prev{left:.25rem;}
+    #lightbox .lb-next{right:.25rem;}
 }
 </style>
 </head>
 
 <body class="overflow-hidden">
 
-<!-- Progress bar -->
 <div id="progress"></div>
-
-<!-- Custom cursor -->
 <div id="cur-dot"></div>
 <div id="cur-ring"></div>
 
-<!-- ══════════════════════════════════════════
-     WELCOME SCREEN
-══════════════════════════════════════════ -->
 <div id="welcome">
     <div id="wparticles" style="position:absolute;inset:0;pointer-events:none;"></div>
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(212,175,55,.07),transparent);"></div>
-
     <div id="wcontent" style="position:relative;z-index:10;display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5rem;max-width:640px;width:100%;">
         <div id="wlogo" style="opacity:0;margin-bottom:2rem;">
-            <img src="https://i.ibb.co/S4fpg7Md/A-v2-c1-4x.png" alt="Asura Ink" width="200" height="200"
-                 style="width:clamp(130px,18vw,210px);height:auto;filter:drop-shadow(0 0 60px rgba(212,175,55,.4));">
+            <img src="https://i.ibb.co/S4fpg7Md/A-v2-c1-4x.png" alt="Asura Ink" width="200" height="200" style="width:clamp(130px,18vw,210px);height:auto;filter:drop-shadow(0 0 60px rgba(212,175,55,.4));">
         </div>
         <h1 id="wtitle" class="serif gold" style="opacity:0;font-size:clamp(3rem,8vw,6rem);line-height:1;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem;">ASURA INK</h1>
         <p id="wsub" class="caps" style="opacity:0;color:rgba(208,197,175,.65);letter-spacing:.45em;margin-bottom:3.5rem;">Where Art Meets Skin &nbsp;·&nbsp; Pattaya, Thailand</p>
@@ -434,12 +209,8 @@ body::after{
     </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     MAIN SITE
-══════════════════════════════════════════ -->
 <div id="site" style="display:none;">
 
-<!-- NAV -->
 <nav id="nav">
     <a href="#" class="serif" style="font-size:1.2rem;color:#f2ca50;text-transform:uppercase;letter-spacing:.2em;text-decoration:none;">ASURA INK</a>
     <div class="hidden md:flex" style="gap:2.5rem;align-items:center;">
@@ -460,7 +231,6 @@ body::after{
     </div>
 </nav>
 
-<!-- MOBILE MENU -->
 <div id="mmenu">
     <button id="mclose" aria-label="Close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#d0c5af;">
         <span class="material-symbols-outlined" style="font-size:1.5rem;">close</span>
@@ -477,7 +247,6 @@ body::after{
 </div>
 <div id="moverlay"></div>
 
-<!-- ── HERO ── -->
 <header id="hero">
     <div id="hslide-wrap">
         <img src="https://i.ibb.co/FqHF4Lbn/IMG-1728.jpg" alt="Asura Ink" loading="eager" fetchpriority="high" class="hslide" style="opacity:1;">
@@ -486,7 +255,6 @@ body::after{
     <div style="position:absolute;inset:0;z-index:1;background:rgba(0,0,0,.42);"></div>
     <div style="position:absolute;inset:0;z-index:1;background:linear-gradient(to top,#0A0A0A 0%,rgba(10,10,10,.5) 40%,transparent 100%);"></div>
     <canvas id="hcanvas"></canvas>
-
     <div class="hcontent">
         <p id="hey" style="opacity:0;font-size:10px;letter-spacing:.45em;text-transform:uppercase;color:rgba(208,197,175,.55);margin-bottom:1.5rem;">Pattaya · Thailand</p>
         <h1 id="htitle" class="serif gold" style="opacity:0;font-size:clamp(3.5rem,9vw,8rem);line-height:.95;letter-spacing:.05em;text-transform:uppercase;margin-bottom:1.25rem;">ASURA INK</h1>
@@ -496,14 +264,12 @@ body::after{
             <a class="btn-s" href="#gallery" style="text-decoration:none;">View Gallery</a>
         </div>
     </div>
-
     <div class="scroll-ind">
         <span class="caps" style="color:rgba(208,197,175,.35);font-size:9px;letter-spacing:.3em;">Scroll</span>
         <div class="sline"></div>
     </div>
 </header>
 
-<!-- ── STATS BAR ── -->
 <div style="background:#060606;border-top:1px solid rgba(212,175,55,.1);border-bottom:1px solid rgba(212,175,55,.1);">
     <div style="max-width:1200px;margin:0 auto;padding:2.5rem 2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:2rem;text-align:center;">
         <div class="reveal" style="border-right:1px solid rgba(212,175,55,.08);">
@@ -525,14 +291,12 @@ body::after{
     </div>
 </div>
 
-<!-- ── ARTIST PROFILE ── -->
 <section style="padding:6rem 2rem;max-width:1200px;margin:0 auto;">
     <div class="reveal" style="position:relative;overflow:hidden;border:1px solid rgba(212,175,55,.15);background:#111313;border-radius:.75rem;">
         <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 20% 50%,rgba(212,175,55,.04),transparent);"></div>
         <div style="position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:2.5rem;padding:3rem;">
             <div class="photo-wrap">
-                <img loading="lazy" src="https://i.ibb.co/qtjDFyj/IMG-1730.jpg" alt="Asura Ink Artist" width="280" height="280"
-                     style="width:clamp(200px,24vw,280px);height:clamp(200px,24vw,280px);object-fit:cover;border-radius:.75rem;border:1px solid rgba(212,175,55,.25);display:block;">
+                <img loading="lazy" src="https://i.ibb.co/qtjDFyj/IMG-1730.jpg" alt="Asura Ink Artist" width="280" height="280" style="width:clamp(200px,24vw,280px);height:clamp(200px,24vw,280px);object-fit:cover;border-radius:.75rem;border:1px solid rgba(212,175,55,.25);display:block;">
             </div>
             <div style="flex:1;min-width:240px;">
                 <span class="caps" style="display:inline-block;padding:.35rem 1rem;border:1px solid rgba(212,175,55,.25);color:#f2ca50;margin-bottom:1.5rem;">Artist Profile</span>
@@ -564,15 +328,12 @@ body::after{
     </div>
 </section>
 
-<!-- ── GALLERY ── -->
 <section id="gallery" style="padding:6rem 2rem;max-width:1200px;margin:0 auto;">
     <div class="reveal" style="text-align:center;margin-bottom:4rem;">
         <div class="eyebrow" style="justify-content:center;margin-bottom:1rem;">Portfolio</div>
         <h2 class="serif" style="font-size:clamp(2.5rem,5vw,3.5rem);color:white;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;">Gallery</h2>
         <div class="divider"></div>
     </div>
-
-    <!-- Filter -->
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-bottom:3rem;">
         <button class="ftab active" data-f="all">All Work</button>
         <button class="ftab" data-f="fineline">Fine Line</button>
@@ -580,58 +341,59 @@ body::after{
         <button class="ftab" data-f="custom">Custom</button>
         <button class="ftab" data-f="minimal">Minimal</button>
     </div>
-
     <div id="ggrid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;">
-
-        <div class="gitem reveal" data-cat="fineline" onclick="goPortfolio('Mythos & Mandala','Fine Line / Illustrative')"
-             style="aspect-ratio:3/4;border:1px solid rgba(212,175,55,.12);background:#0A0A0A;overflow:hidden;">
+        <div class="gitem reveal" data-cat="fineline" data-index="0" style="aspect-ratio:3/4;border:1px solid rgba(212,175,55,.12);background:#0A0A0A;overflow:hidden;">
             <div class="ripple"></div>
             <img loading="lazy" src="https://cdn.discordapp.com/attachments/1032543542482051092/1517538017567445153/IMG_1431.jpg?ex=6a36a4e9&is=6a355369&hm=7d8f27915ef8b87ef8c85917bc2063af22effe9765ebeea63d59ffba7ece1df0&" alt="Fine Line Tattoo" style="width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.2) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem 2rem;">
                 <span class="caps" style="color:#f2ca50;border:1px solid rgba(212,175,55,.3);background:rgba(0,0,0,.5);backdrop-filter:blur(8px);display:inline-block;padding:.2rem .75rem;width:fit-content;margin-bottom:.5rem;font-size:8px;">Fine Line / Illustrative</span>
                 <h3 class="serif" style="color:white;font-size:1.5rem;margin-bottom:1rem;">Mythos &amp; Mandala</h3>
-                <div class="gcta"><span>View Gallery</span><span class="material-symbols-outlined" style="font-size:13px;">arrow_forward</span></div>
+                <div class="gcta" onclick="event.stopPropagation();goPortfolio('Mythos & Mandala','Fine Line / Illustrative')"><span>View Gallery</span><span class="material-symbols-outlined" style="font-size:13px;">arrow_forward</span></div>
             </div>
         </div>
-
-        <div class="gitem reveal" data-cat="japanese" onclick="goPortfolio('Ryu Guardian','Japanese Traditional')"
-             style="aspect-ratio:3/4;border:1px solid rgba(212,175,55,.12);background:#0A0A0A;overflow:hidden;margin-top:4rem;">
+        <div class="gitem reveal" data-cat="japanese" data-index="1" style="aspect-ratio:3/4;border:1px solid rgba(212,175,55,.12);background:#0A0A0A;overflow:hidden;margin-top:4rem;">
             <div class="ripple"></div>
             <img loading="lazy" src="https://cdn.discordapp.com/attachments/1032543542482051092/1517538034667622430/IMG_1428.jpg?ex=6a36a4ed&is=6a35536d&hm=16712e0e95d66e437c07413d68a3fed6fb3dc9916c17f4e5c2af2845b7057431&" alt="Japanese Tattoo" style="width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.2) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem 2rem;">
                 <span class="caps" style="color:#f2ca50;border:1px solid rgba(212,175,55,.3);background:rgba(0,0,0,.5);backdrop-filter:blur(8px);display:inline-block;padding:.2rem .75rem;width:fit-content;margin-bottom:.5rem;font-size:8px;">Japanese Traditional</span>
                 <h3 class="serif" style="color:white;font-size:1.5rem;margin-bottom:1rem;">Ryu Guardian</h3>
-                <div class="gcta"><span>View Gallery</span><span class="material-symbols-outlined" style="font-size:13px;">arrow_forward</span></div>
+                <div class="gcta" onclick="event.stopPropagation();goPortfolio('Ryu Guardian','Japanese Traditional')"><span>View Gallery</span><span class="material-symbols-outlined" style="font-size:13px;">arrow_forward</span></div>
             </div>
         </div>
-
-        <div class="gitem reveal" data-cat="custom" onclick="goPortfolio('Asura Exclusive','Custom Work')"
-             style="aspect-ratio:3/4;border:1px solid rgba(212,175,55,.12);background:#0A0A0A;overflow:hidden;">
+        <div class="gitem reveal" data-cat="custom" data-index="2" style="aspect-ratio:3/4;border:1px solid rgba(212,175,55,.12);background:#0A0A0A;overflow:hidden;">
             <div class="ripple"></div>
             <img loading="lazy" src="https://cdn.discordapp.com/attachments/1032543542482051092/1517538029680722040/IMG_1429.jpg?ex=6a36a4ec&is=6a35536c&hm=1449393421b077594888feef2e04aae5d7061d9c96901ea38ddbe35af2d0c467&" alt="Custom Tattoo" style="width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.2) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem 2rem;">
                 <span class="caps" style="color:#f2ca50;border:1px solid rgba(212,175,55,.3);background:rgba(0,0,0,.5);backdrop-filter:blur(8px);display:inline-block;padding:.2rem .75rem;width:fit-content;margin-bottom:.5rem;font-size:8px;">Custom Work</span>
                 <h3 class="serif" style="color:white;font-size:1.5rem;margin-bottom:1rem;">Asura Exclusive</h3>
-                <div class="gcta"><span>View Gallery</span><span class="material-symbols-outlined" style="font-size:13px;">arrow_forward</span></div>
+                <div class="gcta" onclick="event.stopPropagation();goPortfolio('Asura Exclusive','Custom Work')"><span>View Gallery</span><span class="material-symbols-outlined" style="font-size:13px;">arrow_forward</span></div>
             </div>
         </div>
-
-        <div class="gitem reveal" data-cat="minimal" onclick="goPortfolio('Minimal Concept','Minimalist Style')"
-             style="aspect-ratio:3/4;border:1px solid rgba(212,175,55,.12);background:#0A0A0A;overflow:hidden;margin-top:4rem;">
+        <div class="gitem reveal" data-cat="minimal" data-index="3" style="aspect-ratio:3/4;border:1px solid rgba(212,175,55,.12);background:#0A0A0A;overflow:hidden;margin-top:4rem;">
             <div class="ripple"></div>
             <img loading="lazy" src="https://cdn.discordapp.com/attachments/1032543542482051092/1517538040887771146/IMG_1427.jpg?ex=6a36a4ef&is=6a35536f&hm=9908afb1acf478f1d4f3f451d8290dd0997ad34723bebebaa1dc09a98ca45893&" alt="Minimal Tattoo" style="width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.2) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem 2rem;">
                 <span class="caps" style="color:#f2ca50;border:1px solid rgba(212,175,55,.3);background:rgba(0,0,0,.5);backdrop-filter:blur(8px);display:inline-block;padding:.2rem .75rem;width:fit-content;margin-bottom:.5rem;font-size:8px;">Minimalist Style</span>
                 <h3 class="serif" style="color:white;font-size:1.5rem;margin-bottom:1rem;">Minimal Concept</h3>
-                <div class="gcta"><span>View Gallery</span><span class="material-symbols-outlined" style="font-size:13px;">arrow_forward</span></div>
+                <div class="gcta" onclick="event.stopPropagation();goPortfolio('Minimal Concept','Minimalist Style')"><span>View Gallery</span><span class="material-symbols-outlined" style="font-size:13px;">arrow_forward</span></div>
             </div>
         </div>
-
     </div>
 </section>
 
-<!-- ── GOOGLE REVIEWS ── -->
-<!-- ── BOOKING ── -->
+<section id="awards" style="padding:0 0 6rem;overflow:hidden;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
+        <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+            <div class="eyebrow" style="justify-content:center;margin-bottom:1rem;">Recognition</div>
+            <h2 class="serif" style="font-size:clamp(2.5rem,5vw,3.5rem);color:white;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;">Awards &amp; Certificates</h2>
+            <div class="divider"></div>
+        </div>
+    </div>
+    <div style="overflow:hidden;padding:.5rem 0;">
+        <div class="atrack" id="atrack"></div>
+    </div>
+</section>
+
 <section id="booking" style="padding:7rem 2rem;background:#111313;border-top:1px solid rgba(212,175,55,.1);">
     <div style="max-width:1200px;margin:0 auto;">
         <div class="reveal" style="text-align:center;margin-bottom:4rem;">
@@ -670,7 +432,6 @@ body::after{
     </div>
 </section>
 
-<!-- ── MAP ── -->
 <section id="map" style="padding:5rem 2rem 0;background:#080808;border-top:1px solid rgba(212,175,55,.1);">
     <div style="max-width:1200px;margin:0 auto;">
         <div class="reveal" style="text-align:center;margin-bottom:3rem;">
@@ -682,11 +443,7 @@ body::after{
     <div class="reveal" style="position:relative;width:100%;height:420px;border-top:1px solid rgba(212,175,55,.15);border-bottom:1px solid rgba(212,175,55,.15);overflow:hidden;">
         <div style="position:absolute;inset:0;background:rgba(10,10,10,.18);pointer-events:none;z-index:1;mix-blend-mode:multiply;"></div>
         <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.5) 0%,transparent 12%,transparent 88%,rgba(10,10,10,.5) 100%);pointer-events:none;z-index:1;"></div>
-        <iframe
-            src="https://www.google.com/maps?q=Asura+Ink+Tattoo+Pattaya,373/10+Moo+9,+3rd+Road,+Bang+Lamung,+Chon+Buri+20150&output=embed"
-            width="100%" height="100%" style="border:0;filter:grayscale(.3) contrast(1.1);" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" title="Asura Ink Tattoo Pattaya — Map">
-        </iframe>
+        <iframe src="https://www.google.com/maps?q=Asura+Ink+Tattoo+Pattaya,373/10+Moo+9,+3rd+Road,+Bang+Lamung,+Chon+Buri+20150&output=embed" width="100%" height="100%" style="border:0;filter:grayscale(.3) contrast(1.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Asura Ink Tattoo Pattaya — Map"></iframe>
         <div style="position:absolute;bottom:1.5rem;left:1.5rem;z-index:2;background:rgba(5,5,5,.92);backdrop-filter:blur(16px);border:1px solid rgba(212,175,55,.25);padding:1.25rem 1.5rem;max-width:300px;box-shadow:0 10px 40px rgba(0,0,0,.5);">
             <div class="serif" style="color:#f2ca50;font-size:1.1rem;letter-spacing:.08em;margin-bottom:.4rem;">ASURA INK</div>
             <p style="color:rgba(208,197,175,.7);font-size:.75rem;line-height:1.7;margin-bottom:.75rem;">373/10 Moo 9, 3rd Road, Bang Lamung District, Chon Buri 20150</p>
@@ -697,15 +454,13 @@ body::after{
     </div>
 </section>
 
-<!-- ── GOOGLE REVIEWS ── -->
-<section id="google-reviews" style="padding:6rem 0 7rem;background:#111313;border-top:1px solid rgba(212,175,55,.1);overflow:hidden;">
+<section id="reviews" style="padding:6rem 0 7rem;background:#111313;border-top:1px solid rgba(212,175,55,.1);overflow:hidden;">
     <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
         <div class="reveal" style="text-align:center;margin-bottom:3rem;">
             <div class="eyebrow" style="justify-content:center;margin-bottom:1rem;">Trusted By Clients</div>
             <h2 class="serif" style="font-size:clamp(2.5rem,5vw,3.5rem);color:white;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;">Google Reviews</h2>
             <div class="divider"></div>
         </div>
-
         <div class="reveal" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2.5rem;background:#0A0A0A;border:1px solid rgba(212,175,55,.15);padding:2rem 2.5rem;margin-bottom:3rem;">
             <svg width="46" height="46" viewBox="0 0 48 48" style="flex-shrink:0;">
                 <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
@@ -738,11 +493,9 @@ body::after{
             </a>
         </div>
     </div>
-
     <div style="overflow:hidden;padding:.5rem 0;">
         <div class="mtrack" id="mtrack"></div>
     </div>
-
     <div class="reveal" style="text-align:center;margin-top:2.5rem;">
         <a class="btn-s" href="https://www.google.com/maps/search/Asura+Ink+Tattoo+Pattaya" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
             <svg width="14" height="14" viewBox="0 0 48 48" style="flex-shrink:0;">
@@ -756,7 +509,6 @@ body::after{
     </div>
 </section>
 
-<!-- ── INSTAGRAM FEED ── -->
 <section id="instagram" style="padding:6rem 2rem;background:#080808;border-top:1px solid rgba(212,175,55,.1);">
     <div style="max-width:1200px;margin:0 auto;">
         <div class="reveal" style="text-align:center;margin-bottom:3rem;">
@@ -766,18 +518,9 @@ body::after{
             </h2>
             <div class="divider"></div>
         </div>
-
-        <!-- Live Instagram embed widget -->
         <div class="reveal" style="border:1px solid rgba(212,175,55,.15);background:#111313;padding:1.5rem;min-height:340px;display:flex;align-items:center;justify-content:center;">
-            <iframe
-                src="https://www.instagram.com/asuraink_tattoo/embed"
-                width="100%" height="700" frameborder="0" scrolling="no"
-                allowtransparency="true" loading="lazy"
-                style="max-width:540px;border:0;background:transparent;"
-                title="Asura Ink Instagram Feed">
-            </iframe>
+            <iframe src="https://www.instagram.com/asuraink_tattoo/embed" width="100%" height="700" frameborder="0" scrolling="no" allowtransparency="true" loading="lazy" style="max-width:540px;border:0;background:transparent;" title="Asura Ink Instagram Feed"></iframe>
         </div>
-
         <div style="text-align:center;margin-top:2.5rem;">
             <a class="btn-p mag" href="https://www.instagram.com/asuraink_tattoo" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
                 <span class="material-symbols-outlined" style="font-size:1rem;">photo_camera</span>
@@ -787,7 +530,6 @@ body::after{
     </div>
 </section>
 
-<!-- ── FAQ ── -->
 <section id="faq" style="padding:7rem 2rem;background:#111313;border-top:1px solid rgba(212,175,55,.1);">
     <div style="max-width:1200px;margin:0 auto;">
         <div class="reveal" style="text-align:center;margin-bottom:4rem;">
@@ -796,7 +538,6 @@ body::after{
             <div class="divider"></div>
         </div>
         <div style="max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:.75rem;">
-
             <div class="fitem reveal" style="border:1px solid rgba(212,175,55,.12);background:#0A0A0A;">
                 <button class="ftrig" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.5rem;background:none;border:none;text-align:left;cursor:none!important;" aria-expanded="false">
                     <span style="color:white;font-size:.875rem;font-weight:500;">How do I book? / จองคิวอย่างไร?</span>
@@ -804,7 +545,6 @@ body::after{
                 </button>
                 <div class="fans"><p style="color:rgba(208,197,175,.75);font-size:.875rem;line-height:1.9;padding:0 1.5rem 1.5rem;">Contact via Line (@asuraink), WhatsApp (+66 92 426 3914), or Instagram DM. We'll discuss design, placement, and dates. A deposit secures your slot.</p></div>
             </div>
-
             <div class="fitem reveal" style="border:1px solid rgba(212,175,55,.12);background:#0A0A0A;">
                 <button class="ftrig" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.5rem;background:none;border:none;text-align:left;cursor:none!important;" aria-expanded="false">
                     <span style="color:white;font-size:.875rem;font-weight:500;">How much does it cost? / ราคาเท่าไหร่?</span>
@@ -812,7 +552,6 @@ body::after{
                 </button>
                 <div class="fans"><p style="color:rgba(208,197,175,.75);font-size:.875rem;line-height:1.9;padding:0 1.5rem 1.5rem;">Pricing depends on size, complexity, and placement. Small pieces start from 2,000 THB. Full-sleeve custom work is quoted per project. Contact us for a free estimate.</p></div>
             </div>
-
             <div class="fitem reveal" style="border:1px solid rgba(212,175,55,.12);background:#0A0A0A;">
                 <button class="ftrig" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.5rem;background:none;border:none;text-align:left;cursor:none!important;" aria-expanded="false">
                     <span style="color:white;font-size:.875rem;font-weight:500;">What styles do you do? / สไตล์ไหนที่ถนัด?</span>
@@ -820,7 +559,6 @@ body::after{
                 </button>
                 <div class="fans"><p style="color:rgba(208,197,175,.75);font-size:.875rem;line-height:1.9;padding:0 1.5rem 1.5rem;">Fine Line, Blackwork, Japanese Traditional, and Custom Illustrative. Every design is drawn from scratch — no flash, no templates.</p></div>
             </div>
-
             <div class="fitem reveal" style="border:1px solid rgba(212,175,55,.12);background:#0A0A0A;">
                 <button class="ftrig" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.5rem;background:none;border:none;text-align:left;cursor:none!important;" aria-expanded="false">
                     <span style="color:white;font-size:.875rem;font-weight:500;">Is it safe &amp; hygienic? / ปลอดภัยไหม?</span>
@@ -828,7 +566,6 @@ body::after{
                 </button>
                 <div class="fans"><p style="color:rgba(208,197,175,.75);font-size:.875rem;line-height:1.9;padding:0 1.5rem 1.5rem;">Yes. Single-use sterilized medical-grade needles every client. Strict hygiene protocols. Your safety is our top priority — no compromises.</p></div>
             </div>
-
             <div class="fitem reveal" style="border:1px solid rgba(212,175,55,.12);background:#0A0A0A;">
                 <button class="ftrig" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.5rem;background:none;border:none;text-align:left;cursor:none!important;" aria-expanded="false">
                     <span style="color:white;font-size:.875rem;font-weight:500;">How to prepare? / ควรเตรียมตัวอย่างไร?</span>
@@ -836,12 +573,10 @@ body::after{
                 </button>
                 <div class="fans"><p style="color:rgba(208,197,175,.75);font-size:.875rem;line-height:1.9;padding:0 1.5rem 1.5rem;">Eat well, stay hydrated, sleep well, avoid alcohol 24hrs before. Wear comfortable clothing that allows easy access to the tattooed area.</p></div>
             </div>
-
         </div>
     </div>
 </section>
 
-<!-- ── FOOTER ── -->
 <footer id="contact" style="background:#040404;border-top:1px solid rgba(212,175,55,.1);">
     <div class="fglow"></div>
     <div style="max-width:1200px;margin:0 auto;padding:4rem 2rem;">
@@ -872,9 +607,8 @@ body::after{
     </div>
 </footer>
 
-</div><!-- /#site -->
+</div>
 
-<!-- ── PORTFOLIO DETAIL PAGE ── -->
 <div id="ppage" style="display:none;min-height:100vh;background:#0A0A0A;padding-top:6rem;padding-bottom:4rem;">
     <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
         <button onclick="closePortfolio()" style="display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(242,202,80,.5);background:rgba(242,202,80,.04);color:#f2ca50;padding:.75rem 1.25rem;margin-bottom:3rem;font-size:9px;letter-spacing:.2em;text-transform:uppercase;cursor:none!important;transition:all .3s;" onmouseover="this.style.background='#f2ca50';this.style.color='#0a0800';" onmouseout="this.style.background='rgba(242,202,80,.04)';this.style.color='#f2ca50';">
@@ -911,10 +645,22 @@ body::after{
     </div>
 </div>
 
-<!-- ── FLOATING CONTACT ── -->
+<!-- LIGHTBOX -->
+<div id="lightbox">
+    <div class="lb-box">
+        <button class="lb-close" aria-label="Close lightbox" onclick="closeLightbox()"><span class="material-symbols-outlined" style="font-size:1.75rem;">close</span></button>
+        <button class="lb-nav lb-prev" aria-label="Previous image" onclick="lbNav(-1)"><span class="material-symbols-outlined">chevron_left</span></button>
+        <img id="lb-img" src="" alt="">
+        <button class="lb-nav lb-next" aria-label="Next image" onclick="lbNav(1)"><span class="material-symbols-outlined">chevron_right</span></button>
+        <div class="lb-cap">
+            <span class="caps" id="lb-tag" style="color:#f2ca50;"></span>
+            <h3 class="serif" id="lb-title" style="color:white;font-size:1.5rem;margin-top:.5rem;"></h3>
+        </div>
+    </div>
+</div>
+
 <div style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:400;display:flex;flex-direction:column;align-items:flex-end;">
-    <div id="fpop"
-         style="margin-bottom:1rem;background:rgba(2,2,2,.98);backdrop-filter:blur(20px);border:1px solid rgba(212,175,55,.2);border-radius:1rem;padding:1.5rem;width:300px;box-shadow:0 0 60px rgba(212,175,55,.07);opacity:0;transform:translateY(12px) scale(.97);pointer-events:none;transition:all .35s cubic-bezier(.4,0,.2,1);">
+    <div id="fpop" style="margin-bottom:1rem;background:rgba(2,2,2,.98);backdrop-filter:blur(20px);border:1px solid rgba(212,175,55,.2);border-radius:1rem;padding:1.5rem;width:300px;box-shadow:0 0 60px rgba(212,175,55,.07);opacity:0;transform:translateY(12px) scale(.97);pointer-events:none;transition:all .35s cubic-bezier(.4,0,.2,1);">
         <h4 class="serif" style="color:#f2ca50;font-size:1.4rem;margin-bottom:1.25rem;border-bottom:1px solid rgba(212,175,55,.12);padding-bottom:.75rem;">Get in Touch</h4>
         <div style="display:flex;flex-direction:column;gap:1rem;">
             <a href="https://maps.google.com/?q=Asura+Ink+Tattoo+Pattaya" target="_blank" rel="noopener noreferrer" style="display:flex;gap:.75rem;align-items:flex-start;text-decoration:none;color:white;font-size:.75rem;transition:color .2s;" onmouseover="this.style.color='#f2ca50';" onmouseout="this.style.color='white';">
@@ -940,14 +686,9 @@ body::after{
     </button>
 </div>
 
-<!-- Back to top -->
 <button id="btt" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});">↑ TOP</button>
 
-<!-- ══════════════════════════════════════════
-     JAVASCRIPT
-══════════════════════════════════════════ -->
 <script>
-/* ─── CURSOR ─── */
 const cdot = document.getElementById('cur-dot');
 const cring = document.getElementById('cur-ring');
 let mx=0,my=0,rx=0,ry=0;
@@ -967,7 +708,6 @@ document.querySelectorAll('a,button,[onclick]').forEach(el=>{
     el.addEventListener('mouseleave',()=>document.body.classList.remove('c-hover'));
 });
 
-/* ─── WELCOME PARTICLES ─── */
 const pwrap=document.getElementById('wparticles');
 for(let i=0;i<20;i++){
     const p=document.createElement('div');
@@ -977,13 +717,12 @@ for(let i=0;i<20;i++){
     pwrap.appendChild(p);
 }
 
-/* ─── WELCOME GSAP ─── */
 gsap.set(['#wlogo','#wtitle','#wsub','#wbtnwrap'],{y:35,opacity:0});
-gsap.timeline({delay:.3})
-    .to('#wlogo',  {y:0,opacity:1,duration:1.3,ease:'power3.out'})
-    .to('#wtitle', {y:0,opacity:1,duration:1.1,ease:'power3.out'},'-=.8')
-    .to('#wsub',   {y:0,opacity:1,duration:.9, ease:'power3.out'},'-=.6')
-    .to('#wbtnwrap',{y:0,opacity:1,duration:.8,ease:'power3.out'},'-=.5');
+gsap.timeline({delay:.7})
+    .to('#wlogo',  {y:0,opacity:1,duration:2.0,ease:'power2.out'})
+    .to('#wtitle', {y:0,opacity:1,duration:1.7,ease:'power2.out'},'-=1.1')
+    .to('#wsub',   {y:0,opacity:1,duration:1.4, ease:'power2.out'},'-=.9')
+    .to('#wbtnwrap',{y:0,opacity:1,duration:1.2,ease:'power2.out'},'-=.7');
 
 document.getElementById('wbtn').addEventListener('click',()=>{
     gsap.to('#welcome',{opacity:0,scale:1.04,duration:.9,ease:'power2.inOut',onComplete:()=>{
@@ -994,7 +733,6 @@ document.getElementById('wbtn').addEventListener('click',()=>{
     }});
 });
 
-/* ─── INIT SITE ─── */
 function initSite(){
     gsap.registerPlugin(ScrollTrigger);
     initHeroAnim();
@@ -1004,6 +742,8 @@ function initSite(){
     initScrollReveal();
     initStats();
     initGallery();
+    initLightbox();
+    initAwardsMarquee();
     initMarquee();
     initCalendar();
     initFAQ();
@@ -1018,7 +758,6 @@ function initSite(){
     },{passive:true});
 }
 
-/* ─── HERO ANIM ─── */
 function initHeroAnim(){
     gsap.set(['#hey','#htitle','#hsub','#hbtns'],{y:40,opacity:0});
     gsap.timeline({delay:.15})
@@ -1028,7 +767,6 @@ function initHeroAnim(){
         .to('#hbtns',{y:0,opacity:1,duration:.8, ease:'power3.out'},'-=.5');
 }
 
-/* ─── HERO CANVAS PARTICLES ─── */
 function initParticleCanvas(){
     const c=document.getElementById('hcanvas');
     if(!c)return;
@@ -1054,12 +792,10 @@ function initParticleCanvas(){
     draw();
 }
 
-/* ─── PARALLAX ─── */
 function initParallax(){
     gsap.to('#hslide-wrap',{yPercent:18,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
 }
 
-/* ─── HERO SLIDER ─── */
 function initHeroSlider(){
     const slides=document.querySelectorAll('.hslide');
     if(slides.length<=1)return;
@@ -1071,7 +807,6 @@ function initHeroSlider(){
     },6000);
 }
 
-/* ─── SCROLL REVEAL ─── */
 function initScrollReveal(){
     gsap.utils.toArray('.reveal').forEach(el=>{
         gsap.fromTo(el,{opacity:0,y:45},{opacity:1,y:0,duration:.9,ease:'power3.out',
@@ -1079,7 +814,6 @@ function initScrollReveal(){
     });
 }
 
-/* ─── STATS COUNTER ─── */
 function initStats(){
     document.querySelectorAll('[data-count]').forEach(el=>{
         const target=+el.dataset.count,suf=el.dataset.suf||'';
@@ -1090,7 +824,6 @@ function initStats(){
     });
 }
 
-/* ─── GALLERY EFFECTS ─── */
 function initGallery(){
     document.querySelectorAll('.gitem').forEach(card=>{
         const img=card.querySelector('img');
@@ -1111,7 +844,6 @@ function initGallery(){
         });
     });
 
-    /* Filter tabs */
     document.querySelectorAll('.ftab').forEach(tab=>{
         tab.addEventListener('click',()=>{
             document.querySelectorAll('.ftab').forEach(t=>t.classList.remove('active'));
@@ -1126,12 +858,101 @@ function initGallery(){
     });
 }
 
-/* ─── REVIEWS MARQUEE ─── */
+/* ─── LIGHTBOX: item list ───
+   Read live from the DOM (so src/title/tag always match what's actually
+   shown, and the broken/expired Discord links are left untouched). */
+let GALLERY_ITEMS=[];
+
+function buildGalleryItems(){
+    GALLERY_ITEMS=[...document.querySelectorAll('.gitem')].map(card=>({
+        img: card.querySelector('img')?.src || '',
+        alt: card.querySelector('img')?.alt || '',
+        title: card.querySelector('h3')?.textContent || '',
+        tag: card.querySelector('.caps')?.textContent || ''
+    }));
+}
+
+let lbIndex=0;
+
+function initLightbox(){
+    buildGalleryItems();
+    document.querySelectorAll('.gitem[data-index]').forEach(card=>{
+        card.addEventListener('click',(e)=>{
+            if(e.target.closest('.gcta')) return; // let the button handle its own navigation
+            openLightbox(parseInt(card.dataset.index,10));
+        });
+    });
+    document.getElementById('lightbox')?.addEventListener('click', e=>{
+        if(e.target.id==='lightbox') closeLightbox();
+    });
+}
+
+function openLightbox(index){
+    if(!GALLERY_ITEMS.length) buildGalleryItems();
+    lbIndex=index;
+    renderLightbox();
+    const lb=document.getElementById('lightbox');
+    lb.classList.add('lb-open');
+    requestAnimationFrame(()=>lb.classList.add('lb-vis'));
+    document.body.style.overflow='hidden';
+}
+
+function closeLightbox(){
+    const lb=document.getElementById('lightbox');
+    lb.classList.remove('lb-vis');
+    setTimeout(()=>{lb.classList.remove('lb-open');document.body.style.overflow='';},350);
+}
+
+function lbNav(dir){
+    lbIndex=(lbIndex+dir+GALLERY_ITEMS.length)%GALLERY_ITEMS.length;
+    renderLightbox();
+}
+
+function renderLightbox(){
+    const item=GALLERY_ITEMS[lbIndex];
+    if(!item)return;
+    const img=document.getElementById('lb-img');
+    img.src=item.img;img.alt=item.alt||item.title;
+    document.getElementById('lb-title').textContent=item.title;
+    document.getElementById('lb-tag').textContent=item.tag;
+}
+
+const AWARDS=[
+    {title:'Best Fine Line Studio', year:'2024', img:'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&q=80&w=500'},
+    {title:'Excellence in Craft', year:'2024', img:'https://images.unsplash.com/photo-1590246815112-f7b3a24f2ad3?auto=format&fit=crop&q=80&w=500'},
+    {title:'Top Rated Studio Pattaya', year:'2023', img:'https://images.unsplash.com/photo-1568515387631-8b0e5a8a3fbd?auto=format&fit=crop&q=80&w=500'},
+    {title:'Hygiene Standard Certified', year:'2023', img:'https://images.unsplash.com/photo-1600021551084-8ba3e4a3c1c8?auto=format&fit=crop&q=80&w=500'},
+    {title:'Artist of the Year', year:'2022', img:'https://images.unsplash.com/photo-1517816428104-797678c7cf0c?auto=format&fit=crop&q=80&w=500'},
+    {title:'Japanese Style Award', year:'2022', img:'https://images.unsplash.com/photo-1590247813693-5541d1c609fd?auto=format&fit=crop&q=80&w=500'},
+    {title:'Custom Design Recognition', year:'2021', img:'https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&q=80&w=500'},
+    {title:'Client Choice Award', year:'2021', img:'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&q=80&w=500'},
+    {title:'Safety & Sterilization Cert.', year:'2020', img:'https://images.unsplash.com/photo-1608889825205-eebdb9fc5806?auto=format&fit=crop&q=80&w=500'},
+    {title:'Rising Studio Award', year:'2020', img:'https://images.unsplash.com/photo-1590246814883-57c511e76523?auto=format&fit=crop&q=80&w=500'},
+];
+function initAwardsMarquee(){
+    const track=document.getElementById('atrack');
+    if(!track)return;
+    const cards=[...AWARDS,...AWARDS].map(a=>`
+        <div class="acard">
+            <img loading="lazy" src="${a.img}" alt="${a.title}">
+            <div class="acap">
+                <span class="material-symbols-outlined" style="color:#f2ca50;font-size:1.4rem;margin-bottom:.4rem;">military_tech</span>
+                <div style="color:white;font-size:.85rem;font-weight:500;line-height:1.3;margin-bottom:.2rem;">${a.title}</div>
+                <div class="caps" style="color:#f2ca50;font-size:8px;">${a.year}</div>
+            </div>
+        </div>`).join('');
+    track.innerHTML=cards;
+}
+
 const REVIEWS=[
     {name:'Sam Poling',     time:'9 months ago', txt:'This place is absolutely awesome. If you\'re looking to get a high quality tattoo from a very experienced tattoo artist that will discuss small details with you (and nail it), you need to get some ink there. Making an appointment would be the best way to go.', replied:false},
     {name:'Kenzie Doctor',  time:'5 months ago', txt:'Can\'t recommend enough. Done an absolute amazing job on my tat. Spent lots of time ensuring size and positioning was what I was wanting. The quality of the tattoo speaks for itself. During tattooing always asked if I needed breaks or anything. Amazing tattoo shop.', replied:true},
     {name:'Branda',         time:'5 months ago', txt:'Thank you so much, number one in Pattaya for tattoos, I absolutely recommend.', replied:true},
     {name:'J Kest',         time:'5 months ago', txt:'Thank you for the advice for my old tattoo and especially the realization of the new one in 3D which is absolutely great, thank you again to you, a super team.', replied:true},
+    {name:'Marco Rinaldi',  time:'3 months ago', txt:'Best tattoo experience I\'ve had in Thailand. Super clean studio, artist took the time to redraw my design twice until it was perfect. Healing has been smooth too, no issues at all.', replied:true},
+    {name:'Ploy Sirichai',  time:'2 months ago', txt:'ทำที่นี่มาสองครั้งแล้ว ชอบมากค่ะ ช่างใจเย็น อธิบายละเอียด ราคาก็ยุติธรรม แนะนำเลยค่ะ', replied:false},
+    {name:'David Chen',     time:'1 month ago', txt:'Walked in without an appointment and they still fit me in for a small piece. Friendly staff, great English, and the studio is spotless. Will be back for something bigger next trip.', replied:true},
+    {name:'Anna Kowalski',  time:'6 weeks ago', txt:'Absolutely stunning fine line work. My friend recommended this place and now I understand why — attention to detail is next level. Worth every baht.', replied:false},
 ];
 function initMarquee(){
     const track=document.getElementById('mtrack');
@@ -1158,7 +979,6 @@ function initMarquee(){
     track.innerHTML=cards;
 }
 
-/* ─── CALENDAR ─── */
 function initCalendar(){
     const BOOKED=[3,7,11,15,18,22,25];
     const MN=['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -1195,7 +1015,8 @@ function initCalendar(){
                 g.querySelectorAll('.cday').forEach(c=>{c.style.background='#0A0A0A';c.style.borderColor='rgba(212,175,55,.06)';});
                 cell.style.background='rgba(212,175,55,.12)';cell.style.borderColor='#f2ca50';
                 const msg=document.getElementById('csel');
-                if(msg){msg.textContent=`Selected: ${cell.dataset.m} ${cell.dataset.d}, ${cell.dataset.y} — Contact us to confirm`;msg.style.display='block';}
+                if(msg){msg.textContent=`Selected: ${cell.dataset.m} ${cell.dataset.d}, ${cell.dataset.y} — opening booking link...`;msg.style.display='block';}
+                window.open('https://bio.link/asurainktattoo','_blank','noopener,noreferrer');
             });
         });
     }
@@ -1204,7 +1025,6 @@ function initCalendar(){
     render();
 }
 
-/* ─── FAQ ─── */
 function initFAQ(){
     document.querySelectorAll('.ftrig').forEach(btn=>{
         btn.addEventListener('click',()=>{
@@ -1225,14 +1045,12 @@ function initFAQ(){
     });
 }
 
-/* ─── NAV ─── */
 function initNav(){
     window.addEventListener('scroll',()=>{
         document.getElementById('nav')?.classList.toggle('scrolled',window.scrollY>60);
     },{passive:true});
 }
 
-/* ─── MOBILE MENU ─── */
 function initMobileMenu(){
     const menu=document.getElementById('mmenu'),ov=document.getElementById('moverlay');
     function openM(){
@@ -1251,7 +1069,6 @@ function initMobileMenu(){
     document.querySelectorAll('[data-ml]').forEach(l=>l.addEventListener('click',closeM));
 }
 
-/* ─── POPOVER ─── */
 function initPopover(){
     const btn=document.getElementById('fbtn'),pop=document.getElementById('fpop');
     let open=false;
@@ -1268,7 +1085,6 @@ function initPopover(){
     });
 }
 
-/* ─── MAGNETIC BUTTONS ─── */
 function initMagnet(){
     document.querySelectorAll('.mag').forEach(el=>{
         el.addEventListener('mousemove',e=>{
@@ -1281,7 +1097,6 @@ function initMagnet(){
     });
 }
 
-/* ─── SCROLL PROGRESS BAR ─── */
 function initScrollProgress(){
     window.addEventListener('scroll',()=>{
         const dh=document.documentElement.scrollHeight-window.innerHeight;
@@ -1289,7 +1104,6 @@ function initScrollProgress(){
     },{passive:true});
 }
 
-/* ─── FOOTER LINKS ─── */
 function initFooterLinks(){
     document.querySelectorAll('.flink').forEach(a=>{
         a.addEventListener('mouseenter',()=>a.style.color='#f2ca50');
@@ -1297,7 +1111,6 @@ function initFooterLinks(){
     });
 }
 
-/* ─── MODALS ─── */
 function openModal(id){
     const m=document.getElementById(id);
     m.classList.add('mopen');
@@ -1311,7 +1124,6 @@ function closeModal(id){
     setTimeout(()=>{m.classList.remove('mopen');document.body.style.overflow='';},350);
 }
 
-/* ─── PORTFOLIO NAV ─── */
 function goPortfolio(title,tag){
     document.getElementById('ptitle').textContent=title;
     document.getElementById('ptag').textContent=tag;
@@ -1331,9 +1143,15 @@ function closePortfolio(){
     }});
 }
 
-/* ─── ESC ─── */
 document.addEventListener('keydown',e=>{
-    if(e.key==='Escape'){ /* reserved for future modals */ }
+    if(e.key==='Escape'){
+        const lb=document.getElementById('lightbox');
+        if(lb && lb.classList.contains('lb-open')) closeLightbox();
+    }
+    if(document.getElementById('lightbox')?.classList.contains('lb-open')){
+        if(e.key==='ArrowLeft') lbNav(-1);
+        if(e.key==='ArrowRight') lbNav(1);
+    }
 });
 </script>
 </body>
