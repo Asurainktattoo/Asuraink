@@ -114,6 +114,24 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .gitem:hover .gcta{background:#f2ca50;color:#0a0800;}
 .ftab{font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:rgba(208,197,175,.55);padding:.45rem 1.1rem;border:1px solid rgba(212,175,55,.1);background:none;cursor:none!important;transition:all .3s;}
 .ftab.active,.ftab:hover{color:#f2ca50;border-color:rgba(212,175,55,.45);background:rgba(212,175,55,.04);}
+
+/* ============================
+   STUDIO / ATMOSPHERE — auto-scrolling marquee
+============================ */
+.sitem{position:relative;overflow:hidden;cursor:none!important;border:1px solid rgba(212,175,55,.12);background:#0A0A0A;border-radius:.5rem;flex-shrink:0;width:300px;aspect-ratio:3/4;}
+.sitem .ripple{position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(circle at var(--rx,50%) var(--ry,50%),rgba(212,175,55,.14) 0%,transparent 65%);opacity:0;transition:opacity .5s;}
+.sitem:hover .ripple{opacity:1;}
+.sitem img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;will-change:transform;display:block;}
+.sitem:hover img{transform:scale(1.06);}
+.sitem .scap{
+    position:absolute;inset:0;z-index:1;
+    background:linear-gradient(to top,rgba(0,0,0,.85) 0%,transparent 55%);
+    display:flex;flex-direction:column;justify-content:flex-end;padding:1rem;
+    pointer-events:none;
+}
+.strack{display:flex;gap:1.5rem;width:max-content;animation:studiomarquee 36s linear infinite;}
+.strack:hover{animation-play-state:paused;}
+@keyframes studiomarquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 .mtrack{display:flex;gap:1.5rem;width:max-content;animation:marquee 32s linear infinite;}
 .mtrack:hover{animation-play-state:paused;}
 @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
@@ -215,6 +233,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     <a href="#" class="serif" style="font-size:1.2rem;color:#f2ca50;text-transform:uppercase;letter-spacing:.2em;text-decoration:none;">ASURA INK</a>
     <div class="hidden md:flex" style="gap:2.5rem;align-items:center;">
         <a class="nlink" href="#gallery">Gallery</a>
+        <a class="nlink" href="#studio">Studio</a>
         <a class="nlink" href="#awards">Awards</a>
         <a class="nlink" href="#reviews">Reviews</a>
         <a class="nlink" href="#faq">FAQ</a>
@@ -237,6 +256,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     </button>
     <nav style="display:flex;flex-direction:column;gap:1.5rem;flex:1;">
         <a class="caps" href="#gallery" data-ml style="color:#d0c5af;text-decoration:none;padding:.75rem 0;border-bottom:1px solid rgba(212,175,55,.1);">Gallery</a>
+        <a class="caps" href="#studio" data-ml style="color:#d0c5af;text-decoration:none;padding:.75rem 0;border-bottom:1px solid rgba(212,175,55,.1);">Studio</a>
         <a class="caps" href="#awards" data-ml style="color:#d0c5af;text-decoration:none;padding:.75rem 0;border-bottom:1px solid rgba(212,175,55,.1);">Awards</a>
         <a class="caps" href="#reviews" data-ml style="color:#d0c5af;text-decoration:none;padding:.75rem 0;border-bottom:1px solid rgba(212,175,55,.1);">Reviews</a>
         <a class="caps" href="#faq" data-ml style="color:#d0c5af;text-decoration:none;padding:.75rem 0;border-bottom:1px solid rgba(212,175,55,.1);">FAQ</a>
@@ -344,7 +364,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     <div id="ggrid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;">
         <div class="gitem reveal" data-cat="fineline" data-index="0" style="aspect-ratio:3/4;border:1px solid rgba(212,175,55,.12);background:#0A0A0A;overflow:hidden;">
             <div class="ripple"></div>
-            <img loading="lazy" src="https://i.postimg.cc/tT9Q9kYc/603049974-18301595785257709-6164925481956434738-n.jpg" alt="Fine Line Tattoo" style="width:100%;height:100%;object-fit:cover;">
+            <img loading="lazy" src="https://cdn.discordapp.com/attachments/1032543542482051092/1517538017567445153/IMG_1431.jpg?ex=6a36a4e9&is=6a355369&hm=7d8f27915ef8b87ef8c85917bc2063af22effe9765ebeea63d59ffba7ece1df0&" alt="Fine Line Tattoo" style="width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.2) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem 2rem;">
                 <span class="caps" style="color:#f2ca50;border:1px solid rgba(212,175,55,.3);background:rgba(0,0,0,.5);backdrop-filter:blur(8px);display:inline-block;padding:.2rem .75rem;width:fit-content;margin-bottom:.5rem;font-size:8px;">Fine Line / Illustrative</span>
                 <h3 class="serif" style="color:white;font-size:1.5rem;margin-bottom:1rem;">Mythos &amp; Mandala</h3>
@@ -353,7 +373,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
         </div>
         <div class="gitem reveal" data-cat="japanese" data-index="1" style="aspect-ratio:3/4;border:1px solid rgba(212,175,55,.12);background:#0A0A0A;overflow:hidden;margin-top:4rem;">
             <div class="ripple"></div>
-            <img loading="lazy" src="https://i.postimg.cc/T1WcFMfm/589027197-18301595776257709-5601877452125538616-n.jpg" alt="Japanese Tattoo" style="width:100%;height:100%;object-fit:cover;">
+            <img loading="lazy" src="https://cdn.discordapp.com/attachments/1032543542482051092/1517538034667622430/IMG_1428.jpg?ex=6a36a4ed&is=6a35536d&hm=16712e0e95d66e437c07413d68a3fed6fb3dc9916c17f4e5c2af2845b7057431&" alt="Japanese Tattoo" style="width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.2) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem 2rem;">
                 <span class="caps" style="color:#f2ca50;border:1px solid rgba(212,175,55,.3);background:rgba(0,0,0,.5);backdrop-filter:blur(8px);display:inline-block;padding:.2rem .75rem;width:fit-content;margin-bottom:.5rem;font-size:8px;">Japanese Traditional</span>
                 <h3 class="serif" style="color:white;font-size:1.5rem;margin-bottom:1rem;">Ryu Guardian</h3>
@@ -362,7 +382,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
         </div>
         <div class="gitem reveal" data-cat="custom" data-index="2" style="aspect-ratio:3/4;border:1px solid rgba(212,175,55,.12);background:#0A0A0A;overflow:hidden;">
             <div class="ripple"></div>
-            <img loading="lazy" src="https://i.postimg.cc/LsbCbVjs/589205011-18301595755257709-7800115930423944487-n.jpg" alt="Custom Tattoo" style="width:100%;height:100%;object-fit:cover;">
+            <img loading="lazy" src="https://cdn.discordapp.com/attachments/1032543542482051092/1517538029680722040/IMG_1429.jpg?ex=6a36a4ec&is=6a35536c&hm=1449393421b077594888feef2e04aae5d7061d9c96901ea38ddbe35af2d0c467&" alt="Custom Tattoo" style="width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.2) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem 2rem;">
                 <span class="caps" style="color:#f2ca50;border:1px solid rgba(212,175,55,.3);background:rgba(0,0,0,.5);backdrop-filter:blur(8px);display:inline-block;padding:.2rem .75rem;width:fit-content;margin-bottom:.5rem;font-size:8px;">Custom Work</span>
                 <h3 class="serif" style="color:white;font-size:1.5rem;margin-bottom:1rem;">Asura Exclusive</h3>
@@ -371,13 +391,26 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
         </div>
         <div class="gitem reveal" data-cat="minimal" data-index="3" style="aspect-ratio:3/4;border:1px solid rgba(212,175,55,.12);background:#0A0A0A;overflow:hidden;margin-top:4rem;">
             <div class="ripple"></div>
-            <img loading="lazy" src="https://i.postimg.cc/cL1F1zmn/026a6b66-16a8-4499-81c3-3c88c3b5edec.jpg" alt="Minimal Tattoo" style="width:100%;height:100%;object-fit:cover;">
+            <img loading="lazy" src="https://cdn.discordapp.com/attachments/1032543542482051092/1517538040887771146/IMG_1427.jpg?ex=6a36a4ef&is=6a35536f&hm=9908afb1acf478f1d4f3f451d8290dd0997ad34723bebebaa1dc09a98ca45893&" alt="Minimal Tattoo" style="width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.2) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem 2rem;">
                 <span class="caps" style="color:#f2ca50;border:1px solid rgba(212,175,55,.3);background:rgba(0,0,0,.5);backdrop-filter:blur(8px);display:inline-block;padding:.2rem .75rem;width:fit-content;margin-bottom:.5rem;font-size:8px;">Minimalist Style</span>
                 <h3 class="serif" style="color:white;font-size:1.5rem;margin-bottom:1rem;">Minimal Concept</h3>
                 <div class="gcta" onclick="event.stopPropagation();goPortfolio('Minimal Concept','Minimalist Style')"><span>View Gallery</span><span class="material-symbols-outlined" style="font-size:13px;">arrow_forward</span></div>
             </div>
         </div>
+    </div>
+</section>
+
+<section id="studio" style="padding:6rem 0;overflow:hidden;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
+        <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+            <div class="eyebrow" style="justify-content:center;margin-bottom:1rem;">Inside Asura Ink</div>
+            <h2 class="serif" style="font-size:clamp(2.5rem,5vw,3.5rem);color:white;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;">The Studio</h2>
+            <div class="divider"></div>
+        </div>
+    </div>
+    <div style="overflow:hidden;padding:.5rem 0;">
+        <div class="strack" id="strack"></div>
     </div>
 </section>
 
@@ -742,6 +775,7 @@ function initSite(){
     initScrollReveal();
     initStats();
     initGallery();
+    initStudioMarquee();
     initLightbox();
     initAwardsMarquee();
     initMarquee();
@@ -858,7 +892,7 @@ function initGallery(){
     });
 }
 
-/* ─── LIGHTBOX: item list ───
+/* ─── LIGHTBOX: main gallery item list ───
    Read live from the DOM (so src/title/tag always match what's actually
    shown, and the broken/expired Discord links are left untouched). */
 let GALLERY_ITEMS=[];
@@ -873,13 +907,14 @@ function buildGalleryItems(){
 }
 
 let lbIndex=0;
+let LB_COLLECTION=[];
 
 function initLightbox(){
     buildGalleryItems();
-    document.querySelectorAll('.gitem[data-index]').forEach(card=>{
+    document.querySelectorAll('.gitem').forEach((card,idx)=>{
         card.addEventListener('click',(e)=>{
             if(e.target.closest('.gcta')) return; // let the button handle its own navigation
-            openLightbox(parseInt(card.dataset.index,10));
+            openLightbox(idx, GALLERY_ITEMS);
         });
     });
     document.getElementById('lightbox')?.addEventListener('click', e=>{
@@ -887,8 +922,9 @@ function initLightbox(){
     });
 }
 
-function openLightbox(index){
-    if(!GALLERY_ITEMS.length) buildGalleryItems();
+function openLightbox(index, collection){
+    LB_COLLECTION = collection || GALLERY_ITEMS;
+    if(!LB_COLLECTION.length && !collection){ buildGalleryItems(); LB_COLLECTION=GALLERY_ITEMS; }
     lbIndex=index;
     renderLightbox();
     const lb=document.getElementById('lightbox');
@@ -904,17 +940,52 @@ function closeLightbox(){
 }
 
 function lbNav(dir){
-    lbIndex=(lbIndex+dir+GALLERY_ITEMS.length)%GALLERY_ITEMS.length;
+    if(!LB_COLLECTION.length) return;
+    lbIndex=(lbIndex+dir+LB_COLLECTION.length)%LB_COLLECTION.length;
     renderLightbox();
 }
 
 function renderLightbox(){
-    const item=GALLERY_ITEMS[lbIndex];
+    const item=LB_COLLECTION[lbIndex];
     if(!item)return;
     const img=document.getElementById('lb-img');
     img.src=item.img;img.alt=item.alt||item.title;
     document.getElementById('lb-title').textContent=item.title;
     document.getElementById('lb-tag').textContent=item.tag;
+}
+
+/* ─── STUDIO: auto-scrolling marquee, click to open in lightbox ───
+   Placeholder images — swap the "img" field for your own studio photos
+   once ready. */
+const STUDIO=[
+    {title:'Main Floor', tag:'Studio', img:'https://images.unsplash.com/photo-1598887142487-3c854d51eabb?auto=format&fit=crop&q=80&w=700'},
+    {title:'Tattooing in Progress', tag:'At Work', img:'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&q=80&w=700'},
+    {title:'Reception & Waiting Area', tag:'Studio', img:'https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?auto=format&fit=crop&q=80&w=700'},
+    {title:'Ink & Equipment Station', tag:'Studio', img:'https://images.unsplash.com/photo-1590246815112-f7b3a24f2ad3?auto=format&fit=crop&q=80&w=700'},
+    {title:'Flash & Reference Wall', tag:'Studio', img:'https://images.unsplash.com/photo-1568515387631-8b0e5a8a3fbd?auto=format&fit=crop&q=80&w=700'},
+    {title:'Detail Work Close-Up', tag:'At Work', img:'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&q=80&w=700'},
+];
+const STUDIO_ITEMS=STUDIO.map(s=>({img:s.img, alt:s.title, title:s.title, tag:s.tag}));
+
+function initStudioMarquee(){
+    const track=document.getElementById('strack');
+    if(!track)return;
+    const cards=[...STUDIO,...STUDIO].map((s,i)=>`
+        <div class="sitem" onclick="openLightbox(${i % STUDIO.length}, STUDIO_ITEMS)">
+            <div class="ripple"></div>
+            <img loading="lazy" src="${s.img}" alt="${s.title}">
+            <div class="scap"><span class="caps" style="color:#f2ca50;font-size:8px;">${s.tag}</span><h3 class="serif" style="color:white;font-size:1.1rem;margin-top:.15rem;">${s.title}</h3></div>
+        </div>`).join('');
+    track.innerHTML=cards;
+
+    track.querySelectorAll('.sitem').forEach(card=>{
+        const rip=card.querySelector('.ripple');
+        card.addEventListener('mousemove',e=>{
+            const r=card.getBoundingClientRect();
+            rip.style.setProperty('--rx',((e.clientX-r.left)/r.width*100)+'%');
+            rip.style.setProperty('--ry',((e.clientY-r.top)/r.height*100)+'%');
+        });
+    });
 }
 
 const AWARDS=[
@@ -929,11 +1000,13 @@ const AWARDS=[
     {title:'Safety & Sterilization Cert.', year:'2020', img:'https://images.unsplash.com/photo-1608889825205-eebdb9fc5806?auto=format&fit=crop&q=80&w=500'},
     {title:'Rising Studio Award', year:'2020', img:'https://images.unsplash.com/photo-1590246814883-57c511e76523?auto=format&fit=crop&q=80&w=500'},
 ];
+const AWARD_ITEMS=AWARDS.map(a=>({img:a.img, alt:a.title, title:a.title, tag:a.year}));
+
 function initAwardsMarquee(){
     const track=document.getElementById('atrack');
     if(!track)return;
-    const cards=[...AWARDS,...AWARDS].map(a=>`
-        <div class="acard">
+    const cards=[...AWARDS,...AWARDS].map((a,i)=>`
+        <div class="acard" onclick="openLightbox(${i % AWARDS.length}, AWARD_ITEMS)">
             <img loading="lazy" src="${a.img}" alt="${a.title}">
             <div class="acap">
                 <span class="material-symbols-outlined" style="color:#f2ca50;font-size:1.4rem;margin-bottom:.4rem;">military_tech</span>
