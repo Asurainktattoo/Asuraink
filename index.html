@@ -139,6 +139,9 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .atrack:hover{animation-play-state:paused;}
 @keyframes awardmarquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 .acard{flex-shrink:0;width:220px;aspect-ratio:3/4;border:1px solid rgba(212,175,55,.15);background:#111313;overflow:hidden;position:relative;}
+.pgal-item{cursor:none!important;}
+.pgal-item img{transition:transform .6s ease;}
+.pgal-item:hover img{transform:scale(1.06);}
 .acard img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
 .acard:hover img{transform:scale(1.08);}
 .acard .acap{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.1) 55%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1rem;}
@@ -663,14 +666,14 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
         <div id="p-panel-0" class="p-panel">
             <h3 class="serif" style="font-size:2rem;color:#f2ca50;text-transform:uppercase;letter-spacing:.1em;margin-bottom:2rem;text-align:center;">Realistic Color</h3>
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;">
-                <div style="border:1px solid rgba(212,175,55,.12);background:#111;overflow:hidden;aspect-ratio:1;position:relative;cursor:none!important;" onmouseover="this.querySelector('img').style.transform='scale(1.06)';" onmouseout="this.querySelector('img').style.transform='scale(1)';">
-                    <img loading="lazy" src="https://i.postimg.cc/fTWQMP44/photo-(13).jpg" alt="Realistic Color artwork 1" style="width:100%;height:100%;object-fit:cover;transition:transform .6s ease;">
+                <div class="pgal-item" style="border:1px solid rgba(212,175,55,.12);background:#111;overflow:hidden;aspect-ratio:1;position:relative;">
+                    <img loading="lazy" src="https://i.postimg.cc/fTWQMP44/photo-(13).jpg" alt="Realistic Color artwork 1" style="width:100%;height:100%;object-fit:cover;">
                 </div>
-                <div style="border:1px solid rgba(212,175,55,.12);background:#111;overflow:hidden;aspect-ratio:1;position:relative;cursor:none!important;" onmouseover="this.querySelector('img').style.transform='scale(1.06)';" onmouseout="this.querySelector('img').style.transform='scale(1)';">
-                    <img loading="lazy" src="https://i.postimg.cc/tC4wKVPC/photo-(14).jpg" alt="Realistic Color artwork 2" style="width:100%;height:100%;object-fit:cover;transition:transform .6s ease;">
+                <div class="pgal-item" style="border:1px solid rgba(212,175,55,.12);background:#111;overflow:hidden;aspect-ratio:1;position:relative;">
+                    <img loading="lazy" src="https://i.postimg.cc/tC4wKVPC/photo-(14).jpg" alt="Realistic Color artwork 2" style="width:100%;height:100%;object-fit:cover;">
                 </div>
-                <div style="border:1px solid rgba(212,175,55,.12);background:#111;overflow:hidden;aspect-ratio:1;position:relative;cursor:none!important;" onmouseover="this.querySelector('img').style.transform='scale(1.06)';" onmouseout="this.querySelector('img').style.transform='scale(1)';">
-                    <img loading="lazy" src="https://i.postimg.cc/Kjrvk3fv/photo-(16).jpg" alt="Realistic Color artwork 3" style="width:100%;height:100%;object-fit:cover;transition:transform .6s ease;">
+                <div class="pgal-item" style="border:1px solid rgba(212,175,55,.12);background:#111;overflow:hidden;aspect-ratio:1;position:relative;">
+                    <img loading="lazy" src="https://i.postimg.cc/Kjrvk3fv/photo-(16).jpg" alt="Realistic Color artwork 3" style="width:100%;height:100%;object-fit:cover;">
                 </div>
             </div>
         </div>
@@ -678,8 +681,8 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
         <div id="p-panel-1" class="p-panel" style="display:none;">
             <h3 class="serif" style="font-size:2rem;color:#f2ca50;text-transform:uppercase;letter-spacing:.1em;margin-bottom:2rem;text-align:center;">Realistic Black and Gray</h3>
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;">
-                <div style="border:1px solid rgba(212,175,55,.12);background:#111;overflow:hidden;aspect-ratio:1;position:relative;cursor:none!important;" onmouseover="this.querySelector('img').style.transform='scale(1.06)';" onmouseout="this.querySelector('img').style.transform='scale(1)';">
-                    <img loading="lazy" src="https://i.postimg.cc/PqpXbRKk/photo-(3).jpg" alt="Realistic Black and Gray artwork 1" style="width:100%;height:100%;object-fit:cover;transition:transform .6s ease;">
+                <div class="pgal-item" style="border:1px solid rgba(212,175,55,.12);background:#111;overflow:hidden;aspect-ratio:1;position:relative;">
+                    <img loading="lazy" src="https://i.postimg.cc/PqpXbRKk/photo-(3).jpg" alt="Realistic Black and Gray artwork 1" style="width:100%;height:100%;object-fit:cover;">
                 </div>
             </div>
         </div>
@@ -687,8 +690,8 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
         <div id="p-panel-2" class="p-panel" style="display:none;">
             <h3 class="serif" style="font-size:2rem;color:#f2ca50;text-transform:uppercase;letter-spacing:.1em;margin-bottom:2rem;text-align:center;">Japanese Style</h3>
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;">
-                <div style="border:1px solid rgba(212,175,55,.12);background:#111;overflow:hidden;aspect-ratio:1;position:relative;cursor:none!important;" onmouseover="this.querySelector('img').style.transform='scale(1.06)';" onmouseout="this.querySelector('img').style.transform='scale(1)';">
-                    <img loading="lazy" src="https://i.postimg.cc/fRQfQGtf/57ae7526-23e8-4dd3-93d4-4ffa66377c86.jpg" alt="Japanese Style artwork 1" style="width:100%;height:100%;object-fit:cover;transition:transform .6s ease;">
+                <div class="pgal-item" style="border:1px solid rgba(212,175,55,.12);background:#111;overflow:hidden;aspect-ratio:1;position:relative;">
+                    <img loading="lazy" src="https://i.postimg.cc/fRQfQGtf/57ae7526-23e8-4dd3-93d4-4ffa66377c86.jpg" alt="Japanese Style artwork 1" style="width:100%;height:100%;object-fit:cover;">
                 </div>
             </div>
         </div>
@@ -696,8 +699,8 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
         <div id="p-panel-3" class="p-panel" style="display:none;">
             <h3 class="serif" style="font-size:2rem;color:#f2ca50;text-transform:uppercase;letter-spacing:.1em;margin-bottom:2rem;text-align:center;">Minimal Small work - Concept</h3>
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;">
-                <div style="border:1px solid rgba(212,175,55,.12);background:#111;overflow:hidden;aspect-ratio:1;position:relative;cursor:none!important;" onmouseover="this.querySelector('img').style.transform='scale(1.06)';" onmouseout="this.querySelector('img').style.transform='scale(1)';">
-                    <img loading="lazy" src="https://i.postimg.cc/hv7THsKk/d2a489ec-7284-436f-8ed4-3c1e8348a5f4.jpg" alt="Minimal Small work artwork 1" style="width:100%;height:100%;object-fit:cover;transition:transform .6s ease;">
+                <div class="pgal-item" style="border:1px solid rgba(212,175,55,.12);background:#111;overflow:hidden;aspect-ratio:1;position:relative;">
+                    <img loading="lazy" src="https://i.postimg.cc/hv7THsKk/d2a489ec-7284-436f-8ed4-3c1e8348a5f4.jpg" alt="Minimal Small work artwork 1" style="width:100%;height:100%;object-fit:cover;">
                 </div>
             </div>
         </div>
@@ -776,43 +779,59 @@ for(let i=0;i<20;i++){
     pwrap.appendChild(p);
 }
 
-gsap.set(['#wlogo','#wtitle','#wsub','#wbtnwrap'],{y:35,opacity:0});
-gsap.timeline({delay:.7})
-    .to('#wlogo',  {y:0,opacity:1,duration:2.0,ease:'power2.out'})
-    .to('#wtitle', {y:0,opacity:1,duration:1.7,ease:'power2.out'},'-=1.1')
-    .to('#wsub',   {y:0,opacity:1,duration:1.4, ease:'power2.out'},'-=.9')
-    .to('#wbtnwrap',{y:0,opacity:1,duration:1.2,ease:'power2.out'},'-=.7');
+try{
+    gsap.set(['#wlogo','#wtitle','#wsub','#wbtnwrap'],{y:35,opacity:0});
+    gsap.timeline({delay:.7})
+        .to('#wlogo',  {y:0,opacity:1,duration:2.0,ease:'power2.out'})
+        .to('#wtitle', {y:0,opacity:1,duration:1.7,ease:'power2.out'},'-=1.1')
+        .to('#wsub',   {y:0,opacity:1,duration:1.4, ease:'power2.out'},'-=.9')
+        .to('#wbtnwrap',{y:0,opacity:1,duration:1.2,ease:'power2.out'},'-=.7');
+}catch(e){
+    console.error('welcome animation failed, revealing text directly:', e);
+    ['wlogo','wtitle','wsub','wbtnwrap'].forEach(id=>{
+        const el=document.getElementById(id);
+        if(el){el.style.opacity='1';el.style.transform='none';}
+    });
+}
 
 document.getElementById('wbtn').addEventListener('click',()=>{
-    gsap.to('#welcome',{opacity:0,scale:1.04,duration:.9,ease:'power2.inOut',onComplete:()=>{
+    const proceed=()=>{
         document.getElementById('welcome').style.display='none';
         document.getElementById('site').style.display='block';
         document.body.classList.remove('overflow-hidden');
         initSite();
-    }});
+    };
+    try{
+        gsap.to('#welcome',{opacity:0,scale:1.04,duration:.9,ease:'power2.inOut',onComplete:proceed});
+    }catch(e){
+        console.error('welcome exit animation failed, proceeding directly:', e);
+        proceed();
+    }
 });
 
 function initSite(){
-    gsap.registerPlugin(ScrollTrigger);
-    initHeroAnim();
-    initParticleCanvas();
-    initParallax();
-    initHeroSlider();
-    initScrollReveal();
-    initStats();
-    initGallery();
-    initStudioMarquee();
-    initLightbox();
-    initAwardsMarquee();
-    initMarquee();
-    initCalendar();
-    initFAQ();
-    initMobileMenu();
-    initPopover();
-    initMagnet();
-    initScrollProgress();
-    initFooterLinks();
-    initNav();
+    const safe=(fn)=>{ try{ fn(); }catch(e){ console.error('init failed:', fn.name||'anonymous', e); } };
+    safe(()=>gsap.registerPlugin(ScrollTrigger));
+    safe(initHeroAnim);
+    safe(initParticleCanvas);
+    safe(initParallax);
+    safe(initHeroSlider);
+    safe(initScrollReveal);
+    safe(initStats);
+    safe(initGallery);
+    safe(initStudioMarquee);
+    safe(initLightbox);
+    safe(initPortfolioGalleries);
+    safe(initAwardsMarquee);
+    safe(initMarquee);
+    safe(initCalendar);
+    safe(initFAQ);
+    safe(initMobileMenu);
+    safe(initPopover);
+    safe(initMagnet);
+    safe(initScrollProgress);
+    safe(initFooterLinks);
+    safe(initNav);
     window.addEventListener('scroll',()=>{
         document.getElementById('btt').style.display=window.scrollY>400?'block':'none';
     },{passive:true});
@@ -945,6 +964,18 @@ function initLightbox(){
     });
     document.getElementById('lightbox')?.addEventListener('click', e=>{
         if(e.target.id==='lightbox') closeLightbox();
+    });
+}
+
+function initPortfolioGalleries(){
+    document.querySelectorAll('.p-panel').forEach(panel=>{
+        const items=[...panel.querySelectorAll('.pgal-item')].map(item=>{
+            const img=item.querySelector('img');
+            return {img: img?.src||'', alt: img?.alt||'', title: img?.alt||'', tag: panel.querySelector('h3')?.textContent||''};
+        });
+        panel.querySelectorAll('.pgal-item').forEach((item,idx)=>{
+            item.addEventListener('click', ()=> openLightbox(idx, items));
+        });
     });
 }
 
@@ -1142,7 +1173,9 @@ function initFAQ(){
             if(!isOpen){
                 item.classList.add('fopen');ans.classList.add('open');
                 btn.setAttribute('aria-expanded','true');
-                gsap.from(ans,{opacity:0,y:-8,duration:.3,ease:'power2.out'});
+                if(typeof gsap!=='undefined'){
+                    try{ gsap.from(ans,{opacity:0,y:-8,duration:.3,ease:'power2.out'}); }catch(e){}
+                }
             }
         });
     });
